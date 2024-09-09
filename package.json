@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "lucide": "^0.439.0"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10"
   }
 }

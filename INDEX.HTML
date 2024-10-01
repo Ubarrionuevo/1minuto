@@ -105,10 +105,10 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <img src="/img/facilito.png"    width="100" style="margin-left: 130px;" alt="">                
-            
-                <div class="collapse navbar-collapse"  style="margin-right: 430px;"   id="navbarNav">
+            <div class="container d-flex justify-content-between align-items-center">
+                <img src="/img/facilito.png" width="100" alt="" class="mx-auto">                
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <!-- <li class="nav-item margin "><a class="nav-link" href="#unicidad">Beneficios</a></li>
                         <li class="nav-item mr-4 ml-4"><a class="nav-link" href="#contacto">Contacto</a></li> -->
@@ -126,75 +126,70 @@
 
     </style>
 
-<section id="hero" class="d-flex align-items-center">
-    <div class="container text-center">
-        <div class="">
-            <div class="text-center">
-                <h1><strong>¿Vendés por WhatsApp?
-                    <p class="text-center" style="margin-left: 170px; margin-top: 10px; color: red;">Facilito</p>
-                    <div>
-                        <p style="margin-left: 130px;">es para vos.</p>
-                    </div>
-            </div>
-            <h4 class="pb-3" style="margin-left: 40px;">Ahorrá tiempo, vendé fácil y rápido.</h4>
-            <button  class="btn btn-primary p-4 mt-4" style="margin-left: 170px;" onclick="redirectToWhatsApp()">Cotizar Ahora</button>
-
-            <div class="icon-notebook-tabs"></div>
-        </div>
-        <div class="video-right">
-            <video width="500" height="300" controls>
-                <source src="tu-video.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
+<section id="hero" class="d-flex flex-column align-items-center">
+    <div class="video-right">
+        <video class="img-fluid" width="100%" height="auto" controls>
+            <source src="tu-video.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+    <div class="container text-center mt-4">
+        <div class="text-center">
+            <button class="btn btn-primary p-3 mt-4" onclick="redirectToWhatsApp()">Cotizar Ahora</button>
         </div>
     </div>
 </section>
 
-
-  
-
-<section id="que_es" class="d-flex align-items-center pt-5 mt-4 mb-4">
+<!-- 
+<section id="que_es" class="d-flex flex-column align-items-center pt-5 mt-4 mb-4">
     <div class="container text-center">
-        
-        <div class="container text-center">
-            <h1 class="pb-3"><strong>¿Cómo Funciona?</strong></h1>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-tabs">
-                        <path d="M2 6h4" />
-                        <path d="M2 10h4" />
-                        <path d="M2 14h4" />
-                        <path d="M2 18h4" />
-                        <rect width="16" height="20" x="4" y="2" rx="2" />
-                        <path d="M15 2v20" />
-                        <path d="M15 7h5" />
-                        <path d="M15 12h5" />
-                        <path d="M15 17h5" />
-                    </svg>
-                    <h3 class="pt-3">Elige un plan</h3>
-                    <p>Tenemos planes de <strong>tarifa fija mensual</strong> con varias características y funcionalidades para que puedas concretar tus objetivos y vender mejor.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>
-                    <h3 class="pt-3">Armas tu catalogo</h3>
-                    <p>Subí tu logo, armá tu catálogo de tus productos, configurá formas de pago y envío, generá cupones de descuento y mucho más.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-                    <h3 class="pt-3">Compartís tu link</h3>
-                    <p>Colocalo en la descripción de tu fan page o WhatsApp business, y compartí la novedad en tu feed e historias: ¡ya tenés tu propia tienda digital!</p>
-                </div>
+        <h1 class="pb-3"><strong>¿Cómo Funciona?</strong></h1>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-tabs">
+                    <path d="M2 6h4" />
+                    <path d="M2 10h4" />
+                    <path d="M2 14h4" />
+                    <path d="M2 18h4" />
+                    <rect width="16" height="20" x="4" y="2" rx="2" />
+                    <path d="M15 2v20" />
+                    <path d="M15 7h5" />
+                    <path d="M15 12h5" />
+                    <path d="M15 17h5" />
+                </svg>
+                <h3 class="pt-3">Elige un plan</h3>
+                <p>Tenemos planes de <strong>tarifa fija mensual</strong> con varias características y funcionalidades para que puedas concretar tus objetivos y vender mejor.</p>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store">
+                    <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/>
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                    <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/>
+                    <path d="M2 7h20"/>
+                    <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/>
+                </svg>
+                <h3 class="pt-3">Armas tu catálogo</h3>
+                <p>Subí tu logo, armá tu catálogo de tus productos, configurá formas de pago y envío, generá cupones de descuento y mucho más.</p>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss">
+                    <path d="M4 11a9 9 0 0 1 9 9"/>
+                    <path d="M4 4a16 16 0 0 1 16 16"/>
+                    <circle cx="5" cy="19" r="1"/>
+                </svg>
+                <h3 class="pt-3">Compartís tu link</h3>
+                <p>Colocalo en la descripción de tu fan page o WhatsApp business, y compartí la novedad en tu feed e historias: ¡ya tenés tu propia tienda digital!</p>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-    <!-- Nueva Sección: ¿Qué es CheComida? -->
+<!-- 
     <section id="que_es" class="d-flex align-items-center pt-5 mt-4 mb-4">
         <div class="container text-center">
             
             <div class="container text-center">
-                <h1 class="pb-3"><strong>¿Cómo Funciona?</strong></h1>
+                <h1 class="pb-3"><strong></strong></h1>
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-notebook-tabs">
@@ -224,8 +219,8 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> -->
+<!-- 
     <section id="unicidad" class="section bg-light pt-7 mt-5">
         <div class="container text-center">
             <h1><strong>Mercadito, hay uno solo</strong></h1>
@@ -279,37 +274,17 @@
                 </table>
             </div>
         </div>
-    </section>
-<!-- 
-    <section id="planes" class="d-flex align-items-center pt-5 mt-4 mb-4">
-        <div class="container text-center">
-            <h1><strong>Planes</strong></h1>
-            <h5 class="pb-5">Mercadito.app es una aplicación web diseñada para simplificar y agilizar la gestión de pedidos. Nos encargamos de lo operativo, para que puedas dedicar más tiempo a lo más importante: <strong>Tu producto</strong>.</h6>
-
-                <div>
-                    <p>Plan Inicial</p>
-                    <p>mAX 10 PRODUCTOS</p>
-                    <p>Sin descuentos</p>
-                </div>
-                <div>
-                    <p>Plan Comercial</p>
-                    <p>Productos Ilimitados</p>
-                    <p></p>
-                </div>
-
-        </div>
-    </section> -->
-
+    </section>  -->
     <footer>
         <div class="container">
-            <p>© 2024 Facilito</p>
-            <!-- <div class="social">
+            <p>© 2024 1Minuto</p>
+       <div class="social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-            </div> -->
+            </div> 
         </div>
-    </footer>
+    </footer>  
     <script>
         function redirectToWhatsApp() {
             const phoneNumber = '5493834035119'; // Reemplaza con tu número de WhatsApp incluyendo el código del país (sin signos + o espacios)

@@ -128,6 +128,36 @@
                 max-width: 1140px;
             }
         }
+        .slider-container {
+      width: 100%;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      padding: 10px 0;
+    }
+
+    .slider {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      animation: slide 50s linear infinite;
+    }
+
+    .slider img {
+      width: 80px; /* Ajusta este valor para hacer los iconos más pequeños */
+      height: auto;
+      border-radius: 50px; /* Mantén el borde redondeado */
+      margin: 0 px; /* Espacio entre los iconos */
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
     </style>
 </head>
 
@@ -141,27 +171,45 @@
             </div>
         </nav>
     </header>
-
-    <section id="hero" class="d-flex flex-column align-items-center">
+    <!-- <div id="hero">
+        <h4>Empresas que confian en nosotros :</h4>
+    </div> -->
+    <!-- <div class="slider">
+        <img src="/img/461481915_1065997835533059_852855164209566311_n.jpg" alt="Empresa 2">
+        <img src="/img/Imagen de WhatsApp 2024-09-09 a las 22.41.32_67528092.jpg" alt="Empresa 3">
+        <img src="/img/thifer.jpg" alt="Empresa 4">
+      </div> -->
+      <div class="container mt-3" id="hero">
+                
+        <div class="businesses">
+            <p><strong>Estos son algunos de los emprendimientos que ya eligieron 1minuto:</strong></p>
+            <div class="logos mt-5">
+                <img src="/img/thifer.jpg" alt="La Mantequilla" width="80px" style="border-radius: 50px;">
+                <img src="/img/Imagen de WhatsApp 2024-09-09 a las 22.41.32_67528092.jpg" alt="Bepetgo" width="80px" style="border-radius: 50px;">
+                <img src="/img/461481915_1065997835533059_852855164209566311_n.jpg" alt="Pez" width="80px" style="border-radius: 50px;">
+            
+            </div>
+        </div>
+    </div> 
+    <section id="hero" class="d-flex flex-column align-items-center mt-3">
         <div class="video-right">
             <video class="img-fluid" style="border-radius: 10px;"  controls autoplay muted>
                 <source src="/video/10 (1).mp4" type="video/mp4">
                 Tu navegador no soporta la etiqueta de video.
             </video>
         </div>
+      
         <div class="container text-center mt-4">
             <div class="text-center">
                 <button  id="cotizar" class="btn btn-primary p-4 mt-4" onclick="redirectToWhatsApp()">Cotizar Ahora</button>
             </div>
+
+         
         </div>
+        
     </section>
 
-    <!-- Secciones comentadas, puedes descomentar si las necesitas -->
-    <!--
-    <section id="que_es" class="d-flex flex-column align-items-center pt-5 mt-4 mb-4">
-        ...
-    </section>
-    -->
+   
 
     <footer>
         <div class="container">

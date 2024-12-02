@@ -10,8 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+         ol {
+            list-style-type: none; /* Elimina la numeración de la lista */
+            font-size: 0.85em; /* Ajusta el tamaño de la fuente */
+            line-height: 1.5; /* Mejora la legibilidad con mayor espacio entre líneas */
+        }
+        
+         .step {
+            background-color: #f8f8f8;
+            padding: 20px;
+            width: 30%;
+            margin: 10px auto;
+        }
+        .step h2 {
+            color: #ff6f61;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .step h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .step p {
+            color: #555;
+            font-size: 1em;
+            margin-top: 10px;
+        }
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
@@ -157,6 +184,41 @@
         transform: translateX(-100%);
       }
     }
+    .pricing-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card ul {
+            list-style-type: none; /* Elimina los puntos de la lista */
+            padding: 0;
+        }
+
+        .pricing-card ul li::before {
+            content: "✔";
+            color: green;
+            margin-right: 8px;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .pricing-button {
+            border-radius: 5px;
+        }
     
     </style>
 </head>
@@ -171,28 +233,11 @@
             </div>
         </nav>
     </header>
-    <!-- <div id="hero">
-        <h4>Empresas que confian en nosotros :</h4>
-    </div> -->
-    <!-- <div class="slider">
-        <img src="/img/461481915_1065997835533059_852855164209566311_n.jpg" alt="Empresa 2">
-        <img src="/img/Imagen de WhatsApp 2024-09-09 a las 22.41.32_67528092.jpg" alt="Empresa 3">
-        <img src="/img/thifer.jpg" alt="Empresa 4">
-      </div> -->
+ 
       <div class="container mt-3" id="hero">
-                
-        <div class="businesses">
-            <h2><strong>Confian en nosotros</strong></h2>
-            <p>Algunos de los clientes que confian en nosotros</p>
-            <div class="logos mt-5">
-                <img src="/img/thifer.jpg" alt="La Mantequilla" width="80px" style="border-radius: 50px;">
-                <img src="/img/Imagen de WhatsApp 2024-09-09 a las 22.41.32_67528092.jpg" alt="Bepetgo" width="80px" style="border-radius: 50px;">
-                <img src="/img/461481915_1065997835533059_852855164209566311_n.jpg" alt="Pez" width="80px" style="border-radius: 50px;">
-            
-            </div>
-        </div>
+
     </div> 
-    <section id="hero" class="d-flex flex-column align-items-center mt-3">
+    <section id="hero" class="d-flex flex-column align-items-center ">
         <div class="video-right">
             <video class="img-fluid" style="border-radius: 10px;"  controls autoplay muted>
                 <source src="/video/10 (1).mp4" type="video/mp4">
@@ -208,6 +253,76 @@
          
         </div>
         
+    </section>
+
+    <section id="hero" class="d-flex flex-column align-items-center mt-3">
+        <h3 style="margin-bottom: 10px"><strong>¿Como Funciona?</strong></h3>
+
+        <div class="container d-flex justify-content-center flex-wrap ">
+            <div class="step text-center pricing-card">
+                <h2>PASO 1</h2>
+                <h3>Elegis el plan </h3>
+                <p>Tenés 2 opciones con varias características y funcionalidades para que puedas concretar tus objetivos y vender mejor.</p>
+            </div>
+            <div class="step text-center  pricing-card">
+                <h2>PASO 2</h2>
+                <h3>Creas tu tienda</h3>
+                <p>Subí tu logo, armá tu catálogo con fotos de tus productos, configurá formas de pago y envío, generá cupones de descuento y mucho más.</p>
+            </div>
+            <div class="step text-center  pricing-card">
+                <h2>PASO 3</h2>
+                <h3>Compartis el link</h3>
+                <p>Colocalo en la descripción de tu fan page o WhatsApp business, y compartí la novedad en tu feed e historias: ¡ya tenés tu propia tienda digital!</p>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="hero" class="d-flex flex-column align-items-center mt-3">
+        <section class="py-5">
+            <div class="container text-center">
+                <h1 class="mb-4"><strong>Precios Accesibles</strong></h1>
+                <div class="row justify-content-center">
+                    <!-- Plan Básico -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pricing-card p-4 bg-white">
+                            <h2 class="pricing-title">Plan Básico</h2>
+                            <p class="pricing-price"><strong>$10.000</strong></p>
+                            <ul class="text-start">
+                                <li>Recepción de Pedidos en WhatsApp</li>
+                                <li>Pedidos, categorías y productos ilimitados</li>
+                                <li>Centro de Pedidos</li>
+                                <li>Perfil de Comercio Personalizable</li>
+                                <li>Catálogo Digital</li>
+                                <li>Soporte Técnico</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 mt-3 pricing-button">Cotiza Ahora</button>
+                        </div>
+                    </div>
+                    <!-- Plan Premium -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="pricing-card p-4 bg-white">
+                            <h2 class="pricing-title">Plan Premium</h2>
+                            <p class="pricing-price"><strong>$15.500</strong></p>
+                            <ul class="text-start">
+                                <li>Todo en el Plan Básico</li>
+                                <li>Integración de Feedback Post-Venta</li>
+                                <li>Promociones por Temporada</li>
+                                <li>Informes de Ventas Personalizados</li>
+                                <li>Carga y Actualización de Productos Automáticas</li>
+                                <li>Control de Stock</li>
+                                <li>Código QR de Acceso a la Tienda</li>
+                                <li>Integración de Funcionalidades Nuevas</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 mt-3 pricing-button">Cotiza Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        </div>
+    
     </section>
 
    

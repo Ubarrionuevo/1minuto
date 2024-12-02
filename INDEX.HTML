@@ -220,6 +220,35 @@
             border-radius: 5px;
         }
     
+    /* Estilos para el modal de waitlist */
+    .modal-content {
+        border-radius: 10px;
+    }
+
+    .modal-header {
+        background-color: #F02626;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .modal-header .close {
+        color: white;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    #waitlistForm .btn-primary {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
     </style>
 </head>
 
@@ -235,7 +264,20 @@
     </header>
  
       <div class="container mt-3" id="hero">
+<<<<<<< HEAD
 
+=======
+                
+        <div class="businesses">
+            <h2><strong>Confian en nosotros</strong></h2>
+            <p>Algunos de los clientes que confian en nosotros</p>
+            <div class="logos mt-5">
+               
+                <img src="/img/461481915_1065997835533059_852855164209566311_n.jpg" alt="Pez" width="80px" style="border-radius: 50px;">
+            
+            </div>
+        </div>
+>>>>>>> d7e459ca9ea2ba2cb979875169fd1e0f59a30e21
     </div> 
     <section id="hero" class="d-flex flex-column align-items-center ">
         <div class="video-right">
@@ -247,7 +289,7 @@
       
         <div class="container text-center mt-4">
             <div class="text-center">
-                <button  id="cotizar" class="btn btn-primary p-4 mt-4" onclick="redirectToWhatsApp()">Cotizar Ahora</button>
+                <button id="cotizar" class="btn btn-primary p-4 mt-4" data-toggle="modal" data-target="#waitlistModal">Cotizar Ahora</button>
             </div>
 
          
@@ -349,6 +391,41 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Agregar el modal de waitlist antes del footer -->
+    <div class="modal fade" id="waitlistModal" tabindex="-1" role="dialog" aria-labelledby="waitlistModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="waitlistModalLabel">Contactanos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/manybwjk" method="POST">
+                        <div class="form-group">
+                            <label>Tu email:</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tu mensaje:</label>
+                            <textarea name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agregar antes de cerrar el body -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("TU_PUBLIC_KEY"); // Reemplaza con tu public key de EmailJS
+        })();
+    </script>
 </body>
 
 </html>

@@ -1,267 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1Minuto</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-         ol {
-            list-style-type: none; /* Elimina la numeración de la lista */
-            font-size: 0.85em; /* Ajusta el tamaño de la fuente */
-            line-height: 1.5; /* Mejora la legibilidad con mayor espacio entre líneas */
-        }
-        
-         .step {
-            background-color: #f8f8f8;
-            padding: 20px;
-            width: 30%;
-            margin: 10px auto;
-        }
-        .step h2 {
-            color: #ff6f61;
-            font-size: 1em;
-            font-weight: bold;
-        }
-        .step h3 {
-            color: #333;
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-        .step p {
-            color: #555;
-            font-size: 1em;
-            margin-top: 10px;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-       
-
-        .navbar {
-            padding: 15px 0;
-            background-color: #F02626;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: #fff !important;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: #ffd5c2 !important;
-        }
-
-        #hero {
-            background: url('path_to_image') no-repeat center center/cover;
-            color: black;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: #F02626;
-            border-color: #ff5722;
-            transition: background-color 0.3s;
-            padding: 10px 20px;
-            font-size: 1rem;
-        }
-
-        .btn-primary:hover {
-            background-color: #e64a19;
-            border-color: #e64a19;
-        }
-
-        .section {
-            padding: 60px 20px;
-        }
-
-        .bg-light {
-            background-color: #f8f9fa !important;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .social a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 1.2rem;
-        }
-
-        .social a:hover {
-            color: #ff5722;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            color: #ff5722;
-        }
-
-        .container h1 {
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-        .row {
-            margin-bottom: 20px;
-        }
-
-        a {
-            color: #ff5722;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #e64a19;
-        }
-
-        /* Asegurar que el video no sea demasiado grande en pantallas grandes */
-        .video-right video {
-            max-width: 400%;
-            height:500px;
-        }
-
-        /* Limitar el ancho máximo de los contenedores en pantallas grandes */
-        @media (min-width: 768px) {
-            .container {
-                max-width: 550px;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .container {
-                max-width: 970px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1140px;
-            }
-        }
-        .slider-container {
-      width: 100%;
-      overflow: hidden;
-      background-color: #f0f0f0;
-      padding: 10px 0;
-    }
-
-    .slider {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      animation: slide 50s linear infinite;
-    }
-
-    .slider img {
-      width: 80px; /* Ajusta este valor para hacer los iconos más pequeños */
-      height: auto;
-      border-radius: 50px; /* Mantén el borde redondeado */
-      margin: 0 px; /* Espacio entre los iconos */
-    }
-
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-    .pricing-card {
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pricing-card ul {
-            list-style-type: none; /* Elimina los puntos de la lista */
-            padding: 0;
-        }
-
-        .pricing-card ul li::before {
-            content: "✔";
-            color: green;
-            margin-right: 8px;
-        }
-
-        .pricing-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .pricing-price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #007bff;
-        }
-
-        .pricing-button {
-            border-radius: 5px;
-        }
-    
-    /* Estilos para el modal de waitlist */
-    .modal-content {
-        border-radius: 10px;
-    }
-
-    .modal-header {
-        background-color: #F02626;
-        color: white;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    .modal-header .close {
-        color: white;
-    }
-
-    .form-group {
-        margin-bottom: 1rem;
-    }
-
-    .form-control {
-        border-radius: 5px;
-    }
-
-    #waitlistForm .btn-primary {
-        width: 100%;
-        margin-top: 1rem;
-    }
-    
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container d-flex justify-content-center align-items-center">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/Mercadito (1) nuevo logo.png" width="100" alt="Mercadito Logo">
+<body class="font-['Montserrat']">
+    <header class="bg-[#F02626] py-4">
+        <nav class="container mx-auto px-4">
+            <div class="flex justify-center items-center">
+                <a href="/" class="flex items-center">
+                    <img src="/CHE-COMIDA-LANDING/img/Mercadito (1) nuevo logo.png" alt="Mercadito Logo" class="h-10">
                 </a>
             </div>
         </nav>
     </header>
+<<<<<<< HEAD
  
       <div class="container mt-3" id="hero">
     </div> 
@@ -276,142 +33,130 @@
         <div class="container text-center mt-4">
             <div class="text-center">
                 <button id="cotizar" class="btn btn-primary p-4 mt-4" data-toggle="modal" data-target="#waitlistModal">Cotizar Ahora</button>
-            </div>
+=======
 
-         
-        </div>
-        
-    </section>
-
-    <section id="hero" class="d-flex flex-column align-items-center mt-3">
-        <h3 style="margin-bottom: 10px"><strong>¿Como Funciona?</strong></h3>
-
-        <div class="container d-flex justify-content-center flex-wrap ">
-            <div class="step text-center pricing-card">
-                <h2>PASO 1</h2>
-                <h3>Elegis el plan </h3>
-                <p>Tenés 2 opciones con varias características y funcionalidades para que puedas concretar tus objetivos y vender mejor.</p>
+    <main>
+        <section class="py-12 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <div class="video-container mb-8">
+                    <video class="w-full max-w-4xl mx-auto rounded-lg shadow-lg" controls autoplay muted style="max-height: 70vh">
+                        <source src="./CHE-COMIDA-LANDING/img/Mercadito (1) nuevo logo.png" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+                <div class="text-center">
+                    <button class="bg-[#F02626] text-white px-8 py-3 rounded-lg hover:bg-[#e64a19] transition-colors duration-300" onclick="openModal()">
+                        Cotizar Ahora
+                    </button>
+                </div>
+>>>>>>> 3222c5c407a3eb678ad2795138b23578ef230811
             </div>
-            <div class="step text-center  pricing-card">
-                <h2>PASO 2</h2>
-                <h3>Creas tu tienda</h3>
-                <p>Subí tu logo, armá tu catálogo con fotos de tus productos, configurá formas de pago y envío, generá cupones de descuento y mucho más.</p>
-            </div>
-            <div class="step text-center  pricing-card">
-                <h2>PASO 3</h2>
-                <h3>Compartis el link</h3>
-                <p>Colocalo en la descripción de tu fan page o WhatsApp business, y compartí la novedad en tu feed e historias: ¡ya tenés tu propia tienda digital!</p>
-            </div>
-        </div>
-    
-    </section>
+        </section>
 
-    <section id="hero" class="d-flex flex-column align-items-center mt-3">
-        <section class="py-5">
-            <div class="container text-center">
-                <h1 class="mb-4"><strong>Precios Accesibles</strong></h1>
-                <div class="row justify-content-center">
-                    <!-- Plan Básico -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="pricing-card p-4 bg-white">
-                            <h2 class="pricing-title">Plan Básico</h2>
-                            <p class="pricing-price"><strong>$10.000</strong></p>
-                            <ul class="text-start">
-                                <li>Recepción de Pedidos en WhatsApp</li>
-                                <li>Pedidos, categorías y productos ilimitados</li>
-                                <li>Centro de Pedidos</li>
-                                <li>Perfil de Comercio Personalizable</li>
-                                <li>Catálogo Digital</li>
-                                <li>Soporte Técnico</li>
-                            </ul>
-                            <button class="btn btn-primary w-100 mt-3 pricing-button">Cotiza Ahora</button>
-                        </div>
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-bold text-center mb-12">¿Como Funciona?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <h3 class="text-[#ff6f61] font-bold mb-2">PASO 1</h3>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">Elegis el plan</h4>
+                        <p class="text-gray-600">Tenés 2 opciones con varias características y funcionalidades para que puedas concretar tus objetivos y vender mejor.</p>
                     </div>
-                    <!-- Plan Premium -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="pricing-card p-4 bg-white">
-                            <h2 class="pricing-title">Plan Premium</h2>
-                            <p class="pricing-price"><strong>$15.500</strong></p>
-                            <ul class="text-start">
-                                <li>Todo en el Plan Básico</li>
-                                <li>Integración de Feedback Post-Venta</li>
-                                <li>Promociones por Temporada</li>
-                                <li>Informes de Ventas Personalizados</li>
-                                <li>Carga y Actualización de Productos Automáticas</li>
-                                <li>Control de Stock</li>
-                                <li>Código QR de Acceso a la Tienda</li>
-                                <li>Integración de Funcionalidades Nuevas</li>
-                            </ul>
-                            <button class="btn btn-primary w-100 mt-3 pricing-button">Cotiza Ahora</button>
-                        </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <h3 class="text-[#ff6f61] font-bold mb-2">PASO 2</h3>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">Creas tu tienda</h4>
+                        <p class="text-gray-600">Subí tu logo, armá tu catálogo con fotos de tus productos, configurá formas de pago y envío, generá cupones de descuento y mucho más.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
+                        <h3 class="text-[#ff6f61] font-bold mb-2">PASO 3</h3>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">Compartis el link</h4>
+                        <p class="text-gray-600">Colocalo en la descripción de tu fan page o WhatsApp business, y compartí la novedad en tu feed e historias: ¡ya tenés tu propia tienda digital!</p>
                     </div>
                 </div>
             </div>
         </section>
-       
-        </div>
-    
-    </section>
 
-   
+        <section class="py-16 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-bold text-center mb-12">Precios Accesibles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-4">Plan Básico</h3>
+                        <p class="text-4xl font-bold text-[#F02626] mb-8">$10.000</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Recepción de Pedidos en WhatsApp</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Pedidos, categorías y productos ilimitados</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Centro de Pedidos</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Perfil de Comercio Personalizable</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Catálogo Digital</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Soporte Técnico</li>
+                        </ul>
+                        <button class="w-full bg-[#F02626] text-white py-3 rounded-lg hover:bg-[#e64a19] transition-colors duration-300" onclick="openModal()">
+                            Cotizar Ahora
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-4">Plan Premium</h3>
+                        <p class="text-4xl font-bold text-[#F02626] mb-8">$15.500</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Todo en el Plan Básico</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Integración de Feedback Post-Venta</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Promociones por Temporada</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Informes de Ventas Personalizados</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Carga y Actualización de Productos Automáticas</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Control de Stock</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Código QR de Acceso a la Tienda</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✔</span>Integración de Funcionalidades Nuevas</li>
+                        </ul>
+                        <button class="w-full bg-[#F02626] text-white py-3 rounded-lg hover:bg-[#e64a19] transition-colors duration-300" onclick="openModal()">
+                            Cotizar Ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 1Minuto</p>
-            <div class="social">
-                <a href="""><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/1minuto.app/"><i class="fab fa-instagram"></i></a>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-6">© 2024 1Minuto</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-[#F02626] transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <a href="#" class="hover:text-[#F02626] transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/1minuto.app/" target="_blank" rel="noopener noreferrer" class="hover:text-[#F02626] transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- <script>
-        function redirectToWhatsApp() {
-            const phoneNumber = '5493834035119'; // Reemplaza con tu número de WhatsApp incluyendo el código del país (sin signos + o espacios)
-            const message = 'Hola, estoy interesado en facilito.'; // Mensaje predefinido
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.location.href = url;
-        }
-    </script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Agregar el modal de waitlist antes del footer -->
-    <div class="modal fade" id="waitlistModal" tabindex="-1" role="dialog" aria-labelledby="waitlistModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="waitlistModalLabel">Contactanos</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="https://formspree.io/f/manybwjk" method="POST">
-                        <div class="form-group">
-                            <label>Tu email:</label>
-                            <input type="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Tu mensaje:</label>
-                            <textarea name="message" class="form-control" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                    </form>
-                </div>
+    <!-- Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg max-w-md w-full">
+            <div class="bg-[#F02626] text-white px-6 py-4 rounded-t-lg flex justify-between items-center">
+                <h3 class="text-xl font-semibold">Contactanos</h3>
+                <button onclick="closeModal()" class="text-white hover:text-gray-200">×</button>
             </div>
+            <form id="contactForm" class="p-6">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Tu email:</label>
+                    <input type="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#F02626] focus:border-transparent" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2">Tu mensaje:</label>
+                    <textarea name="message" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#F02626] focus:border-transparent" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#F02626] text-white py-2 rounded-lg hover:bg-[#e64a19] transition-colors duration-300">
+                    Enviar
+                </button>
+            </form>
         </div>
     </div>
 
-    <!-- Agregar antes de cerrar el body -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("TU_PUBLIC_KEY"); // Reemplaza con tu public key de EmailJS
-        })();
-    </script>
+    <script src="/CHE-COMIDA-LANDING/javascript.js"></script>
 </body>
-
 </html>

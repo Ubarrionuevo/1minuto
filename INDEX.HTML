@@ -22,16 +22,17 @@
       <div class="container mt-3" id="hero">
     </div> 
     <section id="hero" class="d-flex flex-column align-items-center ">
-        <div class="video-right">
-            <video class="img-fluid" style="border-radius: 10px;"  controls autoplay muted>
+        <div class="video-container">
+            <video class="video-responsive" controls autoplay muted>
                 <source src="/video/10 (1).mp4" type="video/mp4">
                 Tu navegador no soporta la etiqueta de video.
             </video>
         </div>
+        
       
         <div class="container text-center mt-4">
             <div class="text-center">
-                <button id="cotizar" class="btn btn-primary p-4 mt-4" data-toggle="modal" data-target="#waitlistModal">Cotizar Ahora</button>
+                <button id="cotizar" class="w-full bg-[#F02626] text-white py-3 rounded-lg hover:bg-[#e64a19] transition-colors duration-300" data-toggle="modal" data-target="#waitlistModal">Cotizar Ahora</button>
             </div>
         </section>
 
@@ -138,7 +139,38 @@
             </form>
         </div>
     </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const waitlistForm = document.getElementById('waitlistForm');
+    const successMessage = document.getElementById('successMessage');
 
-    <script src="/CHE-COMIDA-LANDING/javascript.js"></script>
+    waitlistForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        fetch(waitlistForm.action, {
+            method: 'POST',
+            body: new FormData(waitlistForm),
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            waitlistForm.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            setTimeout(() => {
+                $('#waitlistModal').modal('hide');
+                waitlistForm.reset();
+                waitlistForm.style.display = 'block';
+                successMessage.style.display = 'none';
+            }, 3000);
+        })
+        .catch(error => {
+            alert('Hubo un error al enviar tu información. Por favor, intenta nuevamente.');
+        });
+    });
+});
+</script>
+    <script src="/javascript.js"></script>
 </body>
 </html>

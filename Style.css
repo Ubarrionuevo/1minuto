@@ -1,0 +1,13 @@
+.video-container {
+    width: 100%;
+    max-width: 200px; /* Ajusta esto según el tamaño máximo que desees */
+    margin: 0 auto; /* Centra el contenedor del video */
+    padding: 10px; /* Espacio alrededor del video */
+    box-sizing: border-box;
+}
+
+.video-responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

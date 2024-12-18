@@ -33,15 +33,28 @@
 
 
         <section id="hero" class="d-flex flex-column align-items-center ">
-        <div class="video-container">
-            <video class="video-responsive" controls autoplay muted>
-                <source src="/video/Diseño sin título (3).mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-        </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #f8f8f8;">
+                <div style="max-width: 50%;">
+                    <h2 style="font-size: 2rem; color: #2d2d2d; margin-bottom: 1rem;">
+                        <strong>Vendé más rápido, sin complicaciones</strong>
+                    </h2>
+                    <p style="font-size: 1.2rem; color: #555;">
+                        Ahorrá tiempo, tomá pedidos de manera fácil y automática con <strong>1minuto</strong>.
+                    </p>
+                   
+                </div>
+                <div class="video-container" style="max-width: 45%;">
+                    <video class="video-responsive" controls autoplay muted style="width: 100%; border-radius: 10px;">
+                        <source src="/video/Diseño sin título (3).mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+            
         
       
-        <div class="text-center">
+        <div class="text-center mt-3">
             <button id="cotizar" class="bg-red-600 text-white py-2 px-8 rounded hover:bg-red-700 transition duration-300" data-toggle="modal" data-target="#waitlistModal">
                 Cotizar Ahora
             </button>

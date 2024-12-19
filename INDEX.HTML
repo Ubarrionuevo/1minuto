@@ -26,43 +26,31 @@
     <div class="container mt-3" id="hero">
     </div> 
 
-    <h1></h1>
-    <!-- <a href="https://appgentina.com.ar/producto/1minutoapp?ref=badge" title="1minuto.app | Appgentina">
-        <img src="https://appgentina.com.ar/embed-svg/1minutoapp" alt="1minuto.app | Appgentina" style="width: 150px; height: 54px;" width="220" height="54"/>
-    </a> -->
-
-
-        <section id="hero" class="d-flex flex-column align-items-center ">
-
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #f8f8f8;">
-                <div style="max-width: 50%;">
-                    <h2 style="font-size: 2rem; color: #2d2d2d; margin-bottom: 1rem;">
-                        <strong>Vendé más rápido, sin complicaciones</strong>
+        <section id="hero" class="flex flex-col items-center">
+            <div class="flex flex-col md:flex-row items-center justify-between p-5 space-y-6 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-1/2 mb-4 md:mb-0 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                        Vendé más rápido, sin complicaciones
                     </h2>
-                    <p style="font-size: 1.2rem; color: #555;">
+                    <p class="text-lg md:text-xl text-gray-600">
                         Ahorrá tiempo, tomá pedidos de manera fácil y automática con <strong>1minuto</strong>.
                     </p>
-                   
                 </div>
-                <div class="video-container" style="max-width: 45%;">
-                    <video class="video-responsive" controls autoplay muted style="width: 100%; border-radius: 10px;">
+                <div class="w-full md:w-1/2 rounded-lg">
+                    <video class="w-full rounded-lg" controls autoplay muted>
                         <source src="/video/Diseño sin título (3).mp4" type="video/mp4">
                         Tu navegador no soporta la etiqueta de video.
                     </video>
                 </div>
             </div>
-            
-        
-      
-        <div class="text-center mt-3">
-            <button id="cotizar" class="bg-red-600 text-white py-2 px-8 rounded hover:bg-red-700 transition duration-300" data-toggle="modal" data-target="#waitlistModal">
-                Cotizar Ahora
-            </button>
-        </div>
+            <div class="text-center mt-3">
+                <button id="cotizar" class="bg-red-600 text-white py-2 px-8 rounded hover:bg-red-700 transition duration-300" data-toggle="modal" data-target="#waitlistModal">
+                    Cotizar Ahora
+                </button>
+            </div>
         </section>
         <section class="py-16 px-4  text-white" style="margin-top: 30px;">
             <div class="container mx-auto max-w-6xl">
-                <h2 class="text-center text-black text-3xl font-bold mb-8">Personas que confian en 1minuto</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class=" p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
                         <p class="text-black">Desde que contratamos su servicio agilizamos en gran medida el otorgamiento de turnos de peluqueria y baño, haciéndonos más efectivos para tomar pedidos, y así mejorar nuestra capacidad de atención al cliente y de concentrar nuestro tiempo en otras actividades.</p>
@@ -94,25 +82,35 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <p class="text-gray-300">Funciona re bien, me llegó el mensaje de una multa en un lugar que nunca transité y era que un auto tenía la patente muy parecida a la mía. Nunca me llegó la notificación oficial de la multa solo la de multabot y pude empezar a hacer el descargo antes que venciera la multa.</p>
-                        <div class="mt-4">
-                            <div class="flex items-center">
-                                <div class="flex text-yellow-400">
-                                    <span class="material-icons">star</span>
-                                    <span class="material-icons">star</span>
-                                    <span class="material-icons">star</span>
-                                    <span class="material-icons">star</span>
-                                    <span class="material-icons">star</span>
-                                </div>
-                                <p class="ml-2 text-gray-400">Pablo M.</p>
-                            </div>
-                        </div>
-                    </div> -->
+                 
                 </div>
             </div>
         </section>
 
+        <section class="py-16 px-4 bg-gray-100">
+    <!-- <div class="container mx-auto max-w-6xl">
+        <h2 class="text-3xl font-bold text-center mb-12">Clientes</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 text-center">
+                <img src="/img/461481915_1065997835533059_852855164209566311_n.jpg" alt="Cliente 1" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Top Can</h3>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 text-center">
+                <img src="/img/Captura de pantalla 2024-12-17 005354.png" alt="Cliente 2" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Doom Indumentaria</h3>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 text-center">
+                <img src="/img/Imagen de WhatsApp 2024-12-17 a las 22.08.12_7f0b2c2f.jpg" alt="Cliente 3" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">ApplePro Catamarca</h3>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300 text-center">
+                <img src="/img/logo4.png" alt="Cliente 4" class="w-16 h-16 mx-auto mb-4">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Cliente 4</h3>
+            </div>
+         
+        </div>
+    </div> -->
+</section>
 
         <section class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-6xl">
@@ -129,7 +127,7 @@
                         <p class="text-gray-600">Subí tu logo, armá tu catálogo con fotos de tus productos, configurá formas de pago y envío, generá cupones de descuento y mucho más.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <h3 class="text-[#ff6f61] font-bold mb-2">PASO 3</h3>
+                        <h3 class="text-[#ff6f61] font-bold mb-2">PASO 3</h4>
                         <h4 class="text-xl font-bold text-gray-800 mb-4">Compartis el link</h4>
                         <p class="text-gray-600">Colocalo en la descripción de tu fan page o WhatsApp business, y compartí la novedad en tu feed e historias: ¡ya tenés tu propia tienda digital!</p>
                     </div>
@@ -214,7 +212,6 @@
         </div>
     </footer>
 
-    <!-- Modal -->
     <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-50">
         <div class="bg-white rounded-lg max-w-md w-full">
             <div class="bg-[#F02626] text-white px-6 py-4 rounded-t-lg flex justify-between items-center">

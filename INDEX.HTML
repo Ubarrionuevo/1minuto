@@ -48,30 +48,26 @@
         <!-- Contenedor de video centrado -->
        
         <section class="py-16 px-4">
-            <h2 class="text-4xl font-bold text-center mb-16 mt-20" >Beneficios de usar 1minuto</h2>
+            <h2 class="text-4xl font-bold text-center mb-16 mt-20">Beneficios de usar 1minuto</h2>
             
             <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-6 md:gap-12 px-4">
-                <!-- Imagen del teléfono a la izquierda -->
-        
-                
-                <div class="container mx-auto px-4 flex justify-center items-center mt-8">
-                    <div class="w-full md:w-1/2 rounded-lg shadow-lg">
-                        <div class="aspect-w-16 aspect-h-9 w-full">
-                            <iframe 
-                                class="w-full h-full rounded-lg"
-                                style="aspect-ratio: 16/9;"
-                                src="https://www.youtube.com/embed/RN-Yu_nRpGQ?autoplay=1&mute=1&loop=1&playlist=RN-Yu_nRpGQ"
-                                title="1minuto Demo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
+                <!-- Video container - más grande en móvil, normal en desktop -->
+                <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            class="w-full rounded-lg shadow-lg"
+                            style="aspect-ratio: 16/9; height: 100%;"
+                            src="https://www.youtube.com/embed/RN-Yu_nRpGQ?autoplay=1&mute=1&loop=1&playlist=RN-Yu_nRpGQ"
+                            title="1minuto Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
 
-                <!-- Beneficios a la derecha -->
-                <div class="w-full md:w-1/2 space-y-8 md:space-y-12 mt-4">
+                <!-- Beneficios a la derecha en desktop, arriba en móvil -->
+                <div class="w-full md:w-1/2 space-y-8 md:space-y-12 order-1 md:order-2 mb-8 md:mb-0">
                     <div>
                         <h3 class="text-2xl font-bold mb-2">Pedidos organizados</h3>
                         <p class="text-gray-600">Recibí todos los pedidos de forma clara y ordenada, sin mensajes confusos ni información perdida.</p>

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     
     <style>
         /* Animaciones personalizadas */
@@ -49,11 +50,11 @@
 
 </head>
 <body class="font-['Montserrat']">
-    <header class="bg-white py-4 sm:py-6 fixed w-full top-0 z-50 shadow-sm">
+    <header class="bg-white py-6 sm:py-8 fixed w-full top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
                 <div class="flex items-center justify-between md:justify-between relative">
-                    <!-- Instagram (izquierda en mobile, visible en ambos) -->
+                    <!-- Instagram (izquierda en mobile) -->
                     <a href="https://www.instagram.com/1minuto.app/" 
                        target="_blank" 
                        rel="noopener noreferrer" 
@@ -63,12 +64,12 @@
                         </svg>
                     </a>
 
-                    <!-- Logo centrado y más grande -->
+                    <!-- Logo centrado y ajustado -->
                     <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
                         <a href="/" class="flex items-center animate-float">
                             <img src="/img/Mercadito (1) nuevo logo.png" 
                                  alt="Mercadito Logo" 
-                                 class="h-20 md:h-16 object-contain object-center smooth-transition"
+                                 class="h-14 md:h-12 object-contain object-center smooth-transition"
                                  style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));">
                         </a>
                     </div>
@@ -83,15 +84,15 @@
                         </button>
                     </div>
 
-                    <!-- Espacio vacío en mobile para mantener el centrado -->
+                    <!-- Espacio vacío en mobile -->
                     <div class="w-7 md:hidden"></div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Agregar un espaciador para compensar el header fijo -->
-    <div class="h-32 md:h-40"></div>
+    <!-- Espaciador para compensar el navbar fijo -->
+    <div class="h-24 sm:h-28"></div>
 
     <div class="container mt-3" id="hero">
     </div> 
@@ -166,6 +167,89 @@
                 </div>
             </div>
         </section>
+          <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Marcas que confían en nosotros
+            </h2>
+
+            <!-- Contenedor del slider optimizado -->
+            <div class="relative max-w-6xl mx-auto overflow-hidden">
+                <div class="swiper-container" id="brandSlider">
+                    <div class="swiper-wrapper">
+                        <!-- Marcas -->
+                        <div class="swiper-slide">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
+                                <img src="placeholder1.jpg" 
+                                     alt="Café París" 
+                                     class="w-full h-full object-cover rounded-full shadow-md"
+                                     loading="lazy"
+                                     decoding="async">
+                                <p class="text-center mt-2 text-sm font-medium">Café París</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
+                                <img src="placeholder2.jpg" 
+                                     alt="La Pizzería" 
+                                     class="w-full h-full object-cover rounded-full shadow-md"
+                                     loading="lazy"
+                                     decoding="async">
+                                <p class="text-center mt-2 text-sm font-medium">La Pizzería</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
+                                <img src="placeholder3.jpg" 
+                                     alt="Sushi Now" 
+                                     class="w-full h-full object-cover rounded-full shadow-md"
+                                     loading="lazy"
+                                     decoding="async">
+                                <p class="text-center mt-2 text-sm font-medium">Sushi Now</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
+                                <img src="placeholder4.jpg" 
+                                     alt="Burger House" 
+                                     class="w-full h-full object-cover rounded-full shadow-md"
+                                     loading="lazy"
+                                     decoding="async">
+                                <p class="text-center mt-2 text-sm font-medium">Burger House</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
+                                <img src="placeholder5.jpg" 
+                                     alt="Dulce & Co" 
+                                     class="w-full h-full object-cover rounded-full shadow-md"
+                                     loading="lazy"
+                                     decoding="async">
+                                <p class="text-center mt-2 text-sm font-medium">Dulce & Co</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
+                                <img src="placeholder6.jpg" 
+                                     alt="Green Food" 
+                                     class="w-full h-full object-cover rounded-full shadow-md"
+                                     loading="lazy"
+                                     decoding="async">
+                                <p class="text-center mt-2 text-sm font-medium">Green Food</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navegación -->
+                    <div class="swiper-button-prev !hidden md:!flex"></div>
+                    <div class="swiper-button-next !hidden md:!flex"></div>
+                    
+                    <!-- Paginación en mobile -->
+                    <div class="swiper-pagination md:hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
         <section class="py-16 px-4 text-white mt-20">
             <div class="container mx-auto max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
@@ -205,7 +289,9 @@
         </section>
 
       
+<section>
 
+</section>
 
        
                 <h2 class="text-3xl font-bold text-center mb-12">Precios Accesibles</h2>
@@ -334,6 +420,90 @@
     });
     </script>
 
-    
+
+  
+
+    <!-- JavaScript optimizado (agregar al final del body) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Inicializar Swiper solo cuando se necesite
+        let brandsSwiper;
+        
+        function initSwiper() {
+            if (!brandsSwiper) {
+                brandsSwiper = new Swiper('#brandSlider', {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    loop: true,
+                    preloadImages: false,
+                    lazy: true,
+                    watchSlidesProgress: true,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 50,
+                        },
+                    },
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        }
+
+        // Inicializar Swiper cuando la sección sea visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    initSwiper();
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(document.querySelector('#brandSlider'));
+    });
+    </script>
+
+    <!-- Estilos optimizados -->
+    <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #F02626;
+        background: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 1.2rem;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #F02626;
+    }
+    </style>
+
 </body>
 </html>

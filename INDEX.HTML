@@ -10,90 +10,156 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        /* Animaciones personalizadas */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Transiciones suaves */
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Efecto hover para cards */
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 
 </head>
 <body class="font-['Montserrat']">
-    <header class="bg-[#F02626] py-4">
+    <header class="bg-white py-6 fixed w-full top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
-                <div class="flex justify-between items-center">
-                    <!-- Logo a la izquierda -->
-                    <a href="/" class="flex items-center">
-                        <img src="/img/Mercadito (1) nuevo logo.png" alt="Mercadito Logo" class="h-10">
-                    </a>
+                <div class="flex flex-col items-center md:flex-row md:justify-between">
+                    <!-- Logo con animación -->
+                    <div class="w-full flex justify-center md:justify-start mb-4 md:mb-0">
+                        <a href="/" class="flex items-center animate-float">
+                            <img src="/img/Mercadito (1) nuevo logo.png" 
+                                 alt="Mercadito Logo" 
+                                 class="h-16 md:h-20 object-contain object-center smooth-transition"
+                                 style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));">
+                        </a>
+                    </div>
                     
-                    <!-- Redes sociales a la derecha -->
-                    <div class="flex space-x-6">
-                        <a href="https://x.com/1minuto_app" class="text-white hover:text-gray-200 transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-                        </a>
-                        <a href="https://www.instagram.com/1minuto.app/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 transition-colors duration-300">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
+                    <!-- Menú y botones en una segunda fila en móvil, misma fila en desktop -->
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="hidden md:flex space-x-8">
+                            <a href="#beneficios" class="text-gray-700 hover:text-[#F02626] transition-colors text-lg">Beneficios</a>
+                            <a href="#testimonios" class="text-gray-700 hover:text-[#F02626] transition-colors text-lg">Testimonios</a>
+                            <a href="#precios" class="text-gray-700 hover:text-[#F02626] transition-colors text-lg">Precios</a>
+                        </div>
+
+                        <div class="flex items-center space-x-6">
+                           
+                            <a href="https://www.instagram.com/1minuto.app/" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-[#F02626] transition-colors">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <button class="bg-[#F02626] text-white px-6 py-3 rounded-lg hover:bg-[#d41f1f] transition-colors text-lg font-medium">
+                                Contactar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
- 
-  
+
+    <!-- Agregar un espaciador para compensar el header fijo -->
+    <div class="h-32 md:h-40"></div>
 
     <div class="container mt-3" id="hero">
     </div> 
 
-        <!-- Hero section con slogan -->
-        <section id="hero" class="flex flex-col items-center px-4 sm:px-6 md:px-12 py-8 md:py-16 bg-gray-50 mt-12 md:mt-20">
-            <div class="text-center max-w-4xl mx-auto px-4">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
+        <!-- Hero Section con animaciones -->
+        <section id="hero" class="flex flex-col items-center px-4 sm:px-6 md:px-12 py-16 md:py-24 ">
+            <div class="text-center max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-delay="200">
                     Vendé más rápido
+                    <span class="block text-[#F02626] mt-2 animate-pulse-slow">por solo $1200 por día</span>
                 </h1>
-                <h1 class="text-2xl md:text-5xl font-bold text-[#F02626] mb-6">
-                    por solo $1200 por día
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8 mt-20">
+                <h2 class="text-xl md:text-2xl text-gray-700 mb-8 mt-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
                     Tu catálogo digital inteligente que convierte mensajes de WhatsApp en ventas concretas
                 </h2>
-                <p class="text-gray-600 mt-8">
-                    Olvidate de los mensajes confusos y pedidos desordenados. Con 1minuto, tus clientes eligen, personalizan y pagan de forma simple, mientras vos recibís toda la información organizada y lista para procesar.
-                </p>
+                <a href="#" class="inline-block bg-[#F02626] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+                    Comenzar ahora
+                </a>
             </div>
         </section>
         <!-- Contenedor de video centrado -->
        
-        <section class="py-16 px-4">
-            <h2 class="text-4xl font-bold text-center mb-16 mt-20">Beneficios de usar 1minuto</h2>
-            
-            <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-6 md:gap-12 px-4">
-                <!-- Video container - más grande en móvil, normal en desktop -->
-                <div class="w-full md:w-1/2 order-2 md:order-1">
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe 
-                            class="w-full rounded-lg shadow-lg"
-                            style="aspect-ratio: 16/9; height: 100%;"
-                            src="https://www.youtube.com/embed/RN-Yu_nRpGQ?autoplay=1&mute=1&loop=1&playlist=RN-Yu_nRpGQ"
-                            title="1minuto Demo"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Beneficios a la derecha en desktop, arriba en móvil -->
-                <div class="w-full md:w-1/2 space-y-8 md:space-y-12 order-1 md:order-2 mb-8 md:mb-0">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Pedidos organizados</h3>
-                        <p class="text-gray-600">Recibí todos los pedidos de forma clara y ordenada, sin mensajes confusos ni información perdida.</p>
+        <section class="py-20 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    <span class="text-[#F02626]">Beneficios</span> de usar 1minuto
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="200">
+                            <div class="flex items-start">
+                                <span class="material-icons text-[#F02626] mr-4">check_circle</span>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Pedidos organizados</h3>
+                                    <p class="text-gray-600">Recibí todos los pedidos de forma clara y ordenada, sin mensajes confusos ni información perdida.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="400">
+                            <div class="flex items-start">
+                                <span class="material-icons text-[#F02626] mr-4">check_circle</span>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Mayor eficiencia</h3>
+                                    <p class="text-gray-600">Automatizá la toma de pedidos y ahorrá tiempo valioso en la gestión de tu negocio.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="600">
+                            <div class="flex items-start">
+                                <span class="material-icons text-[#F02626] mr-4">check_circle</span>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Experiencia simple para tus clientes</h3>
+                                    <p class="text-gray-600">Tus clientes pueden hacer pedidos de forma fácil y rápida, mejorando su satisfacción.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Mayor eficiencia</h3>
-                        <p class="text-gray-600">Automatizá la toma de pedidos y ahorrá tiempo valioso en la gestión de tu negocio.</p>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Experiencia simple para tus clientes</h3>
-                        <p class="text-gray-600">Tus clientes pueden hacer pedidos de forma fácil y rápida, mejorando su satisfacción.</p>
+                    <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                        <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-xl hover-card">
+                            <iframe 
+                                class="w-full h-full"
+                                style="aspect-ratio: 16/9; height: 100%;"
+                                src="https://www.youtube.com/embed/RN-Yu_nRpGQ?autoplay=1&mute=1&loop=1&playlist=RN-Yu_nRpGQ"
+                                title="1minuto Demo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,8 +167,8 @@
         <section class="py-16 px-4 text-white mt-20">
             <div class="container mx-auto max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
-                    <div class=" p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <p class="text-black">Desde que contratamos su servicio agilizamos en gran medida el otorgamiento de turnos de peluqueria y baño, haciéndonos más efectivos para tomar pedidos, y así mejorar nuestra capacidad de atención al cliente y de concentrar nuestro tiempo en otras actividades.</p>
+                    <div class="p-8 rounded-xl shadow-lg hover-card smooth-transition" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-black">Desde que contratamos su servicio agilizamos en gran medida el otorgamiento de turnos de peluqueria y baño, haciéndonos más efectivos para tomar pedidos, y así mejorar nuestra capacidad de atención al cliente y de concentrar nuestro tiempo en otras actividades.</p>
                         <div class="mt-4">
                             <div class="flex items-center">
                                 <div class="flex text-yellow-400">
@@ -116,8 +182,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class=" p-8 rounded-xl shadow-lg hover:-translate-y-1 transition-transform duration-300">
-                        <p class="text-black">Este servicio fue una buena inversión que le aportó valor al negocio, tuve el éxito esperado y ahora estoy buscando mas formas de ofrecer más servicios a través de la aplicacion</p>
+                    <div class="p-8 rounded-xl shadow-lg hover-card smooth-transition" data-aos="fade-up" data-aos-delay="400">
+                        <p class="text-black">Este servicio fue una buena inversión que le aportó valor al negocio, tuve el éxito esperado y ahora estoy buscando mas formas de ofrecer más servicios a través de la aplicación</p>
                         <div class="mt-4">
                             <div class="flex items-center">
                                 <div class="flex text-yellow-400">
@@ -144,7 +210,7 @@
                 <!-- Grid centrado con una sola columna -->
                 <div class="flex justify-center items-center max-w-4xl mx-auto">
                     <!-- Plan Especialista centrado -->
-                    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:-translate-y-2 transition-transform duration-300 w-full md:w-2/3 mx-4">
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 hover-card smooth-transition w-full md:w-2/3 mx-4" data-aos="zoom-in">
                         <h5 class="text-2xl font-bold mb-4"></h5>
                         <p class="text-4xl font-bold text-[#F02626] mb-8 text-center">$35.000/mes</p>
                         <!-- Lista de características del plan especialista -->
@@ -226,6 +292,25 @@
 });
 </script>
     <script src="/javascript.js"></script>
+
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true
+        });
+
+        // Animación suave para el scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
     
 </body>

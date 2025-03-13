@@ -80,7 +80,7 @@
                         <a href="#beneficios" class="text-gray-700 hover:text-[#F02626] transition-colors text-lg">Beneficios</a>
                         <a href="#testimonios" class="text-gray-700 hover:text-[#F02626] transition-colors text-lg">Testimonios</a>
                         <a href="#precios" class="text-gray-700 hover:text-[#F02626] transition-colors text-lg">Precios</a>
-                        <button class="bg-[#F02626] text-white px-6 py-3 rounded-lg hover:bg-[#d41f1f] transition-colors text-lg font-medium">
+                        <button onclick="openModal()" class="bg-[#F02626] text-white px-6 py-3 rounded-lg hover:bg-[#d41f1f] transition-colors text-lg font-medium">
                             Contactar
                         </button>
                     </div>
@@ -103,14 +103,14 @@
             <h2 class="text-xl md:text-2xl text-gray-700 mb-8 mt-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
                     Tu catálogo digital inteligente que convierte mensajes de WhatsApp en ventas concretas
                 </h2>
-            <a href="#" class="inline-block bg-[#F02626] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+            <a href="#precios" class="inline-block bg-[#F02626] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="600">
                 Comenzar ahora
             </a>
             </div>
         </section>
 
     <!-- Beneficios Section -->
-    <section class="py-20 md:py-32 mt-20 md:mt-32 bg-gray-50">
+    <section id="beneficios" class="py-20 md:py-32 mt-20 md:mt-32 bg-gray-50">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
                 <span class="text-[#F02626]">Beneficios</span> de usar 1minuto
@@ -176,7 +176,7 @@
                 <div class="swiper" id="brandSlider">
                     <div class="swiper-wrapper">
                         <!-- Bepetgoi -->
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
                                 <div class="bg-white w-full h-full rounded-full shadow-md p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
                                     <img src="img/alforno-8edc4dd583ec08a6d623e80f01caf02f.png" 
@@ -184,10 +184,11 @@
                                          class="w-full h-full object-contain">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- PEZ -->
-                        <div class="swiper-slide">
+                        <!-- PEZ -->
+                        <!-- <div class="swiper-slide">
                             <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
                                 <div class="bg-[#1B3543] w-full h-full rounded-full shadow-md p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
                                     <img src="img/clubdelantojo-4204809e4c21b638848f5f55fb54d567.png" 
@@ -195,10 +196,10 @@
                                          class="w-full h-full object-contain">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- MIR -->
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
                                 <div class="bg-black w-full h-full rounded-full shadow-md p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
                                     <img src="img/descarga (1).png" 
@@ -206,10 +207,10 @@
                                          class="w-full h-full object-contain">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- MAE -->
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
                                 <div class="bg-black w-full h-full rounded-full shadow-md p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
                                     <img src="img/descarga (2).png" 
@@ -217,10 +218,10 @@
                                          class="w-full h-full object-contain">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Punto33 -->
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
                                 <div class="bg-black w-full h-full rounded-full shadow-md p-4 flex items-center justify-center hover:shadow-lg transition-shadow">
                                     <img src="img/descarga (3).png" 
@@ -228,7 +229,7 @@
                                          class="w-full h-full object-contain">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Il Forno -->
                         <div class="swiper-slide">
@@ -238,8 +239,8 @@
                                          alt="Il Forno" 
                                          class="w-full h-full object-contain">
                                 </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
                         <!-- ADPL -->
                         <div class="swiper-slide">
@@ -249,8 +250,8 @@
                                         class="w-full h-full object-contain">
                                 </div>
                     </div>
-                </div>
-
+                    </div>
+                    
                         <!-- Carthage -->
                         <div class="swiper-slide">
                             <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto">
@@ -278,14 +279,14 @@
                     
                     <!-- Paginación -->
                     <div class="swiper-pagination"></div>
-                </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     
 
-    <section class="py-16 px-4 text-white ">
+    <section id="testimonios" class="py-16 px-4 text-white ">
             <div class="container mx-auto max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
                 <div class="p-8 rounded-xl shadow-lg hover-card smooth-transition" data-aos="fade-up" data-aos-delay="200">
@@ -323,8 +324,62 @@
             </div>
         </section>
 
+    <section id="precios" class="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="text-[#F02626]">Beneficios</span> de usar 1minuto
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <span class="material-icons text-[#F02626] mr-4">check_circle</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Pedidos organizados</h3>
+                                <p class="text-gray-600">Recibí todos los pedidos de forma clara y ordenada, sin mensajes confusos ni información perdida.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="400">
+                        <div class="flex items-start">
+                            <span class="material-icons text-[#F02626] mr-4">check_circle</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Mayor eficiencia</h3>
+                                <p class="text-gray-600">Automatizá la toma de pedidos y ahorrá tiempo valioso en la gestión de tu negocio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="600">
+                        <div class="flex items-start">
+                            <span class="material-icons text-[#F02626] mr-4">check_circle</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Experiencia simple para tus clientes</h3>
+                                <p class="text-gray-600">Tus clientes pueden hacer pedidos de forma fácil y rápida, mejorando su satisfacción.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                    <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-xl hover-card">
+                        <iframe 
+                            class="w-full h-full"
+                            style="aspect-ratio: 16/9; height: 100%;"
+                            src="https://www.youtube.com/embed/RN-Yu_nRpGQ?autoplay=1&mute=1&loop=1&playlist=RN-Yu_nRpGQ"
+                            title="1minuto Demo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <main>
-        <!-- Grid centrado con una sola columna -->
+                <!-- Grid centrado con una sola columna -->
         <div class="flex justify-center items-center max-w-4xl mx-auto mt-6">
             <!-- Plan único -->
             <div class="bg-gradient-to-b from-gray-50 to-white">
@@ -336,7 +391,7 @@
                     </div>
 
                     <!-- Plan único -->
-                    <div class="flex justify-center items-center max-w-4xl mx-auto">
+                <div class="flex justify-center items-center max-w-4xl mx-auto">
                         <div class="bg-white rounded-xl shadow-lg p-8 hover:-translate-y-2 transition-all duration-300 w-full md:w-2/3 mx-4">
                             <!-- Header del plan -->
                             <div class="text-center mb-8">
@@ -446,19 +501,20 @@
                 <h3 class="text-xl font-semibold">Contactanos</h3>
                 <button onclick="closeModal()" class="text-white hover:text-gray-200">×</button>
             </div>
-            <form id="contactForm" class="p-6">
-                <div class="mb-4">
-                    <label class="block text-gray-700 mb-2">Tu email:</label>
-                    <input type="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#F02626] focus:border-transparent" required>
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 mb-2">Tu mensaje:</label>
-                    <textarea name="message" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-[#F02626] focus:border-transparent" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="w-full bg-[#F02626] text-white py-2 rounded-lg hover:bg-[#e64a19] transition-colors duration-300">
-                    Enviar
-                </button>
-            </form>
+            <div class="p-6">
+                <a href="https://wa.me/+5493834035119" target="_blank" class="block w-full">
+                    <div class="mb-4 text-center">
+                        <p class="text-gray-700 text-lg mb-2">¿Querés contactarnos?</p>
+                        <p class="text-gray-600">Hacé click acá para enviarnos un mensaje por WhatsApp</p>
+                    </div>
+                    <button class="w-full bg-[#F02626] text-white py-4 rounded-lg hover:bg-[#e64a19] transition-colors duration-300 flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        </svg>
+                        Contactar por WhatsApp
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 <script>
@@ -507,9 +563,19 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 100; // Ajusta este valor según la altura de tu header
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
@@ -593,5 +659,34 @@
     }
     </style>
     
+    <script>
+    function openModal() {
+        const modal = document.getElementById('contactModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('contactModal');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }
+
+    // Cerrar modal al hacer click fuera
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // Manejar el envío del formulario
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Aquí puedes agregar la lógica para enviar el formulario
+        // Por ejemplo, enviar a un endpoint específico
+        alert('Gracias por contactarnos. Te responderemos pronto.');
+        closeModal();
+    });
+    </script>
 </body>
 </html>

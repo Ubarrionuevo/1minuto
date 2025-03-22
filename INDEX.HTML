@@ -101,11 +101,11 @@
             <h2 class="text-xl md:text-2xl text-gray-700 mb-8 mt-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
                 Recibí pedidos completos y organizados sin tener que responder preguntas repetitivas.
             </h2>
-            <a href="#precios" class="inline-block bg-[#F02626] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="600">
-                    Comenzar ahora
-                </a>
-            </div>
-        </section>
+            <button onclick="openDemoModal()" class="inline-block bg-[#F02626] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+                👉 Ver caso de éxito
+            </button>
+        </div>
+    </section>
        
     <!-- Beneficios Section -->
     <section id="beneficios" class="py-20 md:py-32 mt-20 md:mt-32 bg-gray-50">
@@ -114,9 +114,9 @@
                     <span class="text-[#F02626]">¿Por qué elegir</span> 1minuto?
                 </h2>
                 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="200">
+            <div class="flex justify-center">
+                <div class="space-y-8 max-w-xl w-full">
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="200">
                             <div class="flex items-start">
                                 <span class="material-icons text-[#F02626] mr-4">check_circle</span>
                                 <div>
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="400">
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="400">
                             <div class="flex items-start">
                                 <span class="material-icons text-[#F02626] mr-4">check_circle</span>
                                 <div>
@@ -134,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-right" data-aos-delay="600">
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="600">
                             <div class="flex items-start">
                                 <span class="material-icons text-[#F02626] mr-4">check_circle</span>
                                 <div>
@@ -144,20 +144,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                <!-- <div class="relative" data-aos="fade-left" data-aos-delay="400">
-                    <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-xl hover-card">
-                            <iframe 
-                                class="w-full h-full"
-                                style="aspect-ratio: 16/9; height: 100%;"
-                                src="https://www.youtube.com/embed/RN-Yu_nRpGQ?autoplay=1&mute=1&loop=1&playlist=RN-Yu_nRpGQ"
-                                title="1minuto Demo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                </div> -->
                 </div>
             </div>
         </section>
@@ -393,10 +379,73 @@
         </div>
     </main>
 
- 
+    <!-- Modal de Demo -->
+    <div id="demoModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-start sm:items-center justify-center p-0 sm:p-4 z-50 overflow-y-auto">
+        <div class="bg-white w-full min-h-screen sm:min-h-0 sm:rounded-lg sm:max-w-4xl mx-auto">
+            <div class="bg-[#F02626] text-white px-4 py-3 flex justify-between items-center sticky top-0 z-20">
+                <h3 class="text-lg sm:text-xl font-semibold">Caso de éxito: MARKETortopedia</h3>
+                <button onclick="closeDemoModal()" class="text-white hover:text-gray-200 text-2xl">×</button>
+            </div>
+            <div class="p-0 sm:p-6">
+                <div class="relative w-full h-[calc(100vh-4rem)] sm:h-[70vh]">
+                   
+                    <iframe 
+                        id="demoIframe"
+                        class="w-full h-full"
+                        src="https://ortop-mdz.vercel.app/"
+                        title="MARKETortopedia en vivo"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
-   
-<script>
+    <!-- Modal de Vista Previa del Pedido -->
+    <div id="previewModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-2 sm:p-4 z-[60]">
+        <div class="bg-white rounded-lg w-full max-w-md mx-auto">
+            <div class="bg-[#F02626] text-white px-4 sm:px-6 py-3 sm:py-4 rounded-t-lg flex justify-between items-center">
+                <h3 class="text-lg sm:text-xl font-semibold">Vista Previa del Pedido</h3>
+                <button onclick="closePreviewModal()" class="text-white hover:text-gray-200 text-2xl">×</button>
+            </div>
+            <div class="p-6">
+                <div id="previewContent" class="space-y-4">
+                    <!-- El contenido del pedido se insertará aquí -->
+                </div>
+                <div class="mt-6 text-center">
+                    <p class="text-gray-600 mb-4">Así es como recibirás los pedidos en tu WhatsApp</p>
+                    <button onclick="closePreviewModal()" class="bg-[#F02626] text-white px-6 py-2 rounded-lg hover:bg-[#d41f1f] transition-all duration-300">
+                        Entendido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function openDemoModal() {
+        const modal = document.getElementById('demoModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeDemoModal() {
+        const modal = document.getElementById('demoModal');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }
+
+    // Cerrar modal al hacer click fuera
+    document.getElementById('demoModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeDemoModal();
+        }
+    });
+    </script>
+
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
     const waitlistForm = document.getElementById('waitlistForm');
     const successMessage = document.getElementById('successMessage');
@@ -567,5 +616,65 @@
         closeModal();
     });
     </script>
+
+    <script>
+    function showPreviewModal(orderData) {
+        const modal = document.getElementById('previewModal');
+        const content = document.getElementById('previewContent');
+        
+        // Formatear el contenido del pedido
+        content.innerHTML = `
+            <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-bold text-lg mb-3">📦 Pedido de prueba</h4>
+                <div class="space-y-2">
+                    ${orderData.products.map(product => `
+                        <div class="flex justify-between">
+                            <span>${product.name}</span>
+                            <span>$${product.price}</span>
+                        </div>
+                    `).join('')}
+                    <div class="border-t pt-2 mt-2">
+                        <div class="flex justify-between font-bold">
+                            <span>Total:</span>
+                            <span>$${orderData.total}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closePreviewModal() {
+        const modal = document.getElementById('previewModal');
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }
+
+    // Escuchar mensajes del iframe
+    window.addEventListener('message', function(event) {
+        // Verificar que el mensaje viene de tu dominio
+        if (event.origin === "https://ortop-mdz.vercel.app") {
+            if (event.data.type === 'showPreview') {
+                showPreviewModal(event.data.orderData);
+            }
+        }
+    });
+    </script>
+
+    <style>
+        @media (max-width: 640px) {
+            #demoModal {
+                align-items: flex-start;
+                padding: 0;
+            }
+            
+            #demoModal .bg-white {
+                height: 100vh;
+            }
+        }
+    </style>
 </body>
 </html>

@@ -56,8 +56,8 @@
 
 </head>
 <body class="font-['Montserrat']">
-    <header class="bg-white py-4 sm:py-8 fixed w-full top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-4">
+    <header class="bg-white py-3 sm:py-8 fixed w-full top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-3 sm:px-4">
             <div class="max-w-6xl mx-auto">
                 <div class="flex items-center justify-between md:justify-between relative">
                     <!-- Logo -->
@@ -65,7 +65,7 @@
                         <a href="/" class="flex items-center">
                             <img src="/img/Mercadito (1) nuevo logo.png" 
                                  alt="Mercadito Logo" 
-                                 class="h-10 md:h-12 object-contain object-center smooth-transition"
+                                 class="h-8 sm:h-10 md:h-12 object-contain object-center smooth-transition"
                                  style="filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));">
                         </a>
                     </div>
@@ -81,8 +81,8 @@
                     </div>
 
                     <!-- Botón de menú móvil -->
-                    <button class="md:hidden text-gray-700 hover:text-[#F02626] p-2">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button class="md:hidden text-gray-700 hover:text-[#F02626] p-1.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -93,17 +93,17 @@
 
   
     <!-- Hero Section -->
-    <section id="hero" class="flex flex-col items-center px-4 sm:px-6 md:px-12 py-12 md:py-24 bg-gradient-to-b from-gray-50 to-white mt-16 md:mt-32">
-        <div class="text-center max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-4" data-aos="fade-up" data-aos-delay="200">
+    <section id="hero" class="flex flex-col items-center px-3 sm:px-6 md:px-12 py-10 sm:py-12 md:py-24 bg-gradient-to-b from-gray-50 to-white mt-14 sm:mt-16 md:mt-32">
+        <div class="text-center max-w-4xl mx-auto px-3 sm:px-4" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-up" data-aos-delay="200">
                 Tu tienda online para vender por WhatsApp
-                <span class="block text-[#F02626] mt-2 animate-pulse-slow">Por solo $1,167 por día</span>
+                <span class="block text-[#F02626] mt-1 sm:mt-2 animate-pulse-slow">Por solo $1,167 por día</span>
             </h1>
-            <h2 class="text-lg md:text-2xl text-gray-700 mb-6 md:mb-8 mt-6 md:mt-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="text-base sm:text-lg md:text-2xl text-gray-700 mb-4 sm:mb-6 md:mb-8 mt-4 sm:mt-6 md:mt-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
                 Recibí pedidos completos y organizados sin tener que responder preguntas repetitivas.
             </h2>
-            <div class="mt-4 md:mt-8 text-center">
-                <button onclick="openDemoModal()" class="bg-[#F02626] text-white px-6 md:px-10 py-3 md:py-5 rounded-full text-base md:text-xl font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="mt-3 sm:mt-4 md:mt-8 text-center">
+                <button onclick="openDemoModal()" class="bg-[#F02626] text-white px-4 sm:px-6 md:px-10 py-2.5 sm:py-3 md:py-5 rounded-full text-sm sm:text-base md:text-xl font-semibold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg">
                     👉 Ver caso de éxito en vivo
                 </button>
             </div>
@@ -149,45 +149,45 @@
     </section>
 
     <!-- Beneficios Section -->
-    <section id="beneficios" class="py-20 md:py-32 mt-20 md:mt-20 bg-gray-50">
-            <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-                    <span class="text-[#F02626]">¿Por qué elegir</span> 1minuto?
-                </h2>
-                
+    <section id="beneficios" class="py-12 sm:py-16 md:py-32 mt-12 sm:mt-16 md:mt-20 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-3 sm:px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="text-[#F02626]">¿Por qué elegir</span> 1minuto?
+            </h2>
+            
             <div class="flex justify-center">
-                <div class="space-y-8 max-w-xl w-full">
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="200">
-                            <div class="flex items-start">
-                                <span class="material-icons text-[#F02626] mr-4">check_circle</span>
-                                <div>
-                                    <h3 class="text-xl font-bold mb-2">Vendé 24/7 sin esfuerzo</h3>
-                                    <p class="text-gray-600">Tu negocio vende en cualquier momento sin estar pendiente del WhatsApp. La tecnología trabaja por vos.</p>
-                                </div>
+                <div class="space-y-4 sm:space-y-6 md:space-y-8 max-w-xl w-full">
+                    <div class="bg-white p-4 sm:p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <span class="material-icons text-[#F02626] mr-3 sm:mr-4 text-xl sm:text-2xl">check_circle</span>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Vendé 24/7 sin esfuerzo</h3>
+                                <p class="text-sm sm:text-base text-gray-600">Tu negocio vende en cualquier momento sin estar pendiente del WhatsApp. La tecnología trabaja por vos.</p>
                             </div>
                         </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="400">
-                            <div class="flex items-start">
-                                <span class="material-icons text-[#F02626] mr-4">check_circle</span>
-                                <div>
-                                    <h3 class="text-xl font-bold mb-2">Recuperá tu tiempo</h3>
-                                    <p class="text-gray-600">Dejá de estar todo el día respondiendo WhatsApp. Enfocate en lo importante de tu negocio.</p>
-                                </div>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-start">
+                            <span class="material-icons text-[#F02626] mr-3 sm:mr-4 text-xl sm:text-2xl">check_circle</span>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Recuperá tu tiempo</h3>
+                                <p class="text-sm sm:text-base text-gray-600">Dejá de estar todo el día respondiendo WhatsApp. Enfocate en lo importante de tu negocio.</p>
                             </div>
                         </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="600">
-                            <div class="flex items-start">
-                                <span class="material-icons text-[#F02626] mr-4">check_circle</span>
-                                <div>
-                                    <h3 class="text-xl font-bold mb-2">Ventas automáticas</h3>
-                                    <p class="text-gray-600">El sistema gestiona los pedidos. Solo recibís el pedido listo para procesar.</p>
-                                </div>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 rounded-xl shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="600">
+                        <div class="flex items-start">
+                            <span class="material-icons text-[#F02626] mr-3 sm:mr-4 text-xl sm:text-2xl">check_circle</span>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Ventas automáticas</h3>
+                                <p class="text-sm sm:text-base text-gray-600">El sistema gestiona los pedidos. Solo recibís el pedido listo para procesar.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Marcas Section -->
     <section class="py-20 md:py-32 mt-20 md:mt-32 bg-white">
@@ -363,45 +363,45 @@
         </div>
     </section>
 
-    <section id="precios" class="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+    <section id="precios" class="py-12 sm:py-16 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-3 sm:px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
                 <span class="text-[#F02626]">La solución completa</span> para vender por WhatsApp
             </h2>
             
             <div class="max-w-3xl mx-auto">
-                <div class="bg-gradient-to-b from-gray-50 to-white p-8 md:p-12 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                    <h3 class="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">🚀 Plan Premium</h3>
-                    <p class="text-lg md:text-xl text-gray-700 mb-6">Todo lo que necesitás para vender sin complicaciones</p>
-                    <span class="bg-[#F02626] text-white px-4 py-2 rounded-full text-2xl md:text-3xl mb-2 inline-block">$35,000/mes</span>
-                    <span class="text-gray-700 text-lg md:text-xl mb-6 inline-block">($1,167/día)</span>
-                    <div class="mt-6 space-y-3">
+                <div class="bg-gradient-to-b from-gray-50 to-white p-4 sm:p-6 md:p-12 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4 text-gray-800">🚀 Plan Premium</h3>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6">Todo lo que necesitás para vender sin complicaciones</p>
+                    <span class="bg-[#F02626] text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xl sm:text-2xl md:text-3xl mb-1 sm:mb-2 inline-block">$35,000/mes</span>
+                    <span class="text-gray-700 text-base sm:text-lg md:text-xl mb-4 sm:mb-6 inline-block">($1,167/día)</span>
+                    <div class="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
                         <div class="flex items-start">
-                            <span class="material-icons text-[#F02626] mr-2 text-xl">done</span>
-                            <p class="text-base md:text-lg text-gray-700">Recibe pedidos directamente por WhatsApp</p>
+                            <span class="material-icons text-[#F02626] mr-2 text-lg sm:text-xl">done</span>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">Recibe pedidos directamente por WhatsApp</p>
                         </div>
                         <div class="flex items-start">
-                            <span class="material-icons text-[#F02626] mr-2 text-xl">done</span>
-                            <p class="text-base md:text-lg text-gray-700">Personalización 100% de tu perfil de comercio</p>
+                            <span class="material-icons text-[#F02626] mr-2 text-lg sm:text-xl">done</span>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">Personalización 100% de tu perfil de comercio</p>
                         </div>
                         <div class="flex items-start">
-                            <span class="material-icons text-[#F02626] mr-2 text-xl">done</span>
-                            <p class="text-base md:text-lg text-gray-700">Catálogo digital y carga masiva de productos</p>
+                            <span class="material-icons text-[#F02626] mr-2 text-lg sm:text-xl">done</span>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">Catálogo digital y carga masiva de productos</p>
                         </div>
                         <div class="flex items-start">
-                            <span class="material-icons text-[#F02626] mr-2 text-xl">done</span>
-                            <p class="text-base md:text-lg text-gray-700">Gestión eficiente de pedidos con Centro de Pedidos</p>
+                            <span class="material-icons text-[#F02626] mr-2 text-lg sm:text-xl">done</span>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">Gestión eficiente de pedidos con Centro de Pedidos</p>
                         </div>
                         <div class="flex items-start">
-                            <span class="material-icons text-[#F02626] mr-2 text-xl">done</span>
-                            <p class="text-base md:text-lg text-gray-700">Control de stock y gestión de usuarios</p>
+                            <span class="material-icons text-[#F02626] mr-2 text-lg sm:text-xl">done</span>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">Control de stock y gestión de usuarios</p>
                         </div>
                         <div class="flex items-start">
-                            <span class="material-icons text-[#F02626] mr-2 text-xl">done</span>
-                            <p class="text-base md:text-lg text-gray-700">Estadísticas y reportes de ventas</p>
+                            <span class="material-icons text-[#F02626] mr-2 text-lg sm:text-xl">done</span>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">Estadísticas y reportes de ventas</p>
                         </div>
                     </div>
-                    <button onclick="window.location.href='https://wa.me/+5493834035119'" class="w-full bg-[#F02626] text-white py-4 rounded-lg hover:bg-[#d41f1f] transition-all duration-300 text-lg font-bold hover:scale-105 transform mt-8">
+                    <button onclick="window.location.href='https://wa.me/+5493834035119'" class="w-full bg-[#F02626] text-white py-3 sm:py-4 rounded-lg hover:bg-[#d41f1f] transition-all duration-300 text-base sm:text-lg font-bold hover:scale-105 transform mt-6 sm:mt-8">
                         👉 Comenzar ahora
                     </button>
                 </div>

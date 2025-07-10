@@ -445,7 +445,7 @@
 
 </head>
 <body class="">
-    <header class="bg-white py-4 sm:py-6 fixed w-full top-0 z-50 shadow-md">
+    <header class="bg-white py-2 sm:py-3 fixed w-full top-0 z-50 shadow-md">
         <nav class="container mx-auto px-2 sm:px-4">
             <div class="max-w-7xl mx-auto flex items-center justify-between">
                 <!-- Logo -->
@@ -453,20 +453,20 @@
                     <a href="/" class="flex items-center ml-2 sm:ml-0">
                         <img src="img/1Minuto (1).png" 
                              alt="1Minuto Logo" 
-                             class="h-8 sm:h-10 md:h-12 w-auto object-contain mr-2
+                             class="h-12 sm:h-16 md:h-20 w-auto object-contain mr-2"
                              style="filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.15));">
                     </a>
                 </div>
                 <!-- Contenedor derecho para desktop -->
                 <div class="hidden md:flex items-center space-x-4 sm:space-x-8">
                     <a href="#beneficios" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Beneficios</a>
-                    <a href="#caracteristicas-generales" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Características</a>
-                    <a href="#precios" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Precios</a>
-                    <a href="#faq" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Preguntas</a>
-                    <button onclick="openModal()" class="bg-[#F02626] text-white px-4 sm:px-6 py-2 rounded-full hover:bg-[#d41f1f] transition-all duration-300 text-base font-semibold shadow-lg hover:shadow-xl flex items-center justify-center">
-                        <span class="material-icons text-xl mr-2">calendar_today</span>
-                        Agendar Demo
-                    </button>
+                    <a href="#caracteristicas" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Características</a>
+                    <a href="#comparativa" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Comparativa</a>
+                    <a href="#planes" class="text-gray-700 hover:text-[#F02626] transition-colors text-base sm:text-lg font-medium">Planes</a>
+                    <a href="#planes" class="bg-[#F02626] text-white px-4 sm:px-6 py-2 rounded-full hover:bg-[#d41f1f] transition-all duration-300 text-base font-semibold shadow-lg hover:shadow-xl flex items-center justify-center">
+                        <span class="material-icons text-xl mr-2 text-white">shopping_cart</span>
+                        Empezar ahora
+                    </a>
                 </div>
                 <!-- Botón de menú móvil -->
                 <button class="md:hidden text-gray-700 hover:text-[#F02626] p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#F02626]" aria-label="Abrir menú">
@@ -479,211 +479,173 @@
             <div class="md:hidden hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg py-3 z-50">
                 <div class="p-3 space-y-2">
                     <a href="#beneficios" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Beneficios</a>
-                    <a href="#caracteristicas-generales" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Características</a>
-                    <a href="#precios" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Precios</a>
-                    <a href="#faq" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Preguntas</a>
-                    <button onclick="openModal()" class="w-full bg-[#F02626] text-white px-4 py-2 rounded-lg hover:bg-[#d41f1f] transition-colors duration-300 text-sm font-semibold mt-4">
-                        Agendar Demo
-                    </button>
+                    <a href="#caracteristicas" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Características</a>
+                    <a href="#comparativa" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Comparativa</a>
+                    <a href="#planes" class="block text-gray-700 hover:text-[#F02626] transition-colors text-base py-2">Planes</a>
+                    <a href="#planes" class="w-full bg-[#F02626] text-white px-4 py-2 rounded-lg hover:bg-[#d41f1f] transition-colors duration-300 text-sm font-semibold mt-4 flex items-center justify-center">
+                        <span class="material-icons text-xl mr-2 text-white">shopping_cart</span>
+                        Empezar ahora
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="flex flex-col items-center px-2 sm:px-6 md:px-12 py-6 sm:py-20 md:py-24 mt-20 sm:mt-16 md:mt-32 mb-6 sm:mb-20 md:mb-24">
-        <div class="text-center max-w-4xl mx-auto px-2 sm:px-4" data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 sm:mb-8 leading-tight" data-aos="fade-up" data-aos-delay="200">
-                Tu tienda online para vender por WhatsApp
-                <span class="block text-[#F02626] mt-2 sm:mt-2 animate-pulse-slow text-base sm:text-2xl md:text-3xl">Por solo $1,167 por día</span>
+    <section id="hero" class="flex flex-col items-center px-2 sm:px-6 md:px-12 py-6 sm:py-10 md:py-12 mt-8 sm:mt-8 md:mt-12 mb-0 pb-0">
+        <div class="text-center max-w-4xl mx-auto px-2 sm:px-4">
+            <h2 class="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 mt-16 mb-0 leading-tight">
+                Catálogo online + Mercado Pago + WhatsApp = ventas sin complicaciones
+                <span class="block text-[#F02626] text-2xl sm:text-3xl md:text-4xl font-bold mt-4 mb-2">En menos de 1 minuto</span>
             </h2>
-            <h2 class="text-sm sm:text-lg md:text-2xl text-gray-700 mb-6 sm:mb-10 md:mb-12 mt-2 sm:mt-6 md:mt-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
-                Recibí pedidos completos y organizados sin tener que responder preguntas repetitivas.
-            </h2>
-            <div class="mt-4 sm:mt-4 md:mt-8 text-center">
-                <a href="https://wa.me/+5493834035119" target="_blank" rel="noopener" class="bg-[#F02626] text-white px-4 sm:px-6 md:px-10 py-3 sm:py-3 md:py-5 rounded-full text-sm sm:text-base md:text-xl font-bold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center mx-auto w-full max-w-xs mt-12">
-                    <span class="mr-2">💬</span>
-                    Hablá ahora por WhatsApp
-                </a>
+            <p class="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 mb-6">Olvidate de plataformas difíciles y configuraciones eternas. Empezá a vender ya, sin conocimientos técnicos ni registros complicados.</p>
+            <div class="text-center">
+                <button onclick="abrirDemo()" class="bg-[#F02626] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center mx-auto w-full max-w-xs">
+                    <span class="mr-2">🚀</span>
+                    Probar la demo
+                </button>
             </div>
+            <!-- Modal de Demo -->
+            <div id="modalDemo" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+                <div class="bg-white rounded-lg shadow-2xl max-w-2xl w-full p-6 relative">
+                    <button onclick="cerrarDemo()" class="absolute top-2 right-2 text-gray-500 hover:text-[#F02626] text-2xl font-bold">&times;</button>
+                    <h3 class="text-2xl font-bold mb-4 text-center text-[#F02626]">Demo interactiva</h3>
+                    <iframe src="https://1minuto.ar/demo" class="w-full h-96 rounded-lg border" frameborder="0"></iframe>
+                    <div class="text-center mt-4">
+                        <button onclick="cerrarDemo()" class="bg-[#F02626] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#d41f1f] transition-all duration-300">Cerrar demo</button>
+        </div>
+                </div>
+            </div>
+            <script>
+                function abrirDemo() {
+                    document.getElementById('modalDemo').classList.remove('hidden');
+                }
+                function cerrarDemo() {
+                    document.getElementById('modalDemo').classList.add('hidden');
+                }
+            </script>
         </div>
     </section>
-
     <!-- Beneficios Section -->
-    <section id="beneficios" class="py-3 sm:py-16 md:py-24">
+    <section id="beneficios" class="pt-0 pb-2 sm:pt-0 sm:pb-4 md:pt-0 md:pb-6 mt-0">
         <div class="container mx-auto max-w-6xl px-2 sm:px-4">
-            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
-                <span class="text-[#F02626]">Tu</span> Tienda Online
+            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-8 md:mb-10 ">
+                <span class="text-[#F02626]">¿Por qué es la forma más fácil de vender?</span>
             </h2>
-            <div class="flex flex-col items-center justify-center">
-                <div class="w-full max-w-xs sm:max-w-md flex flex-col items-center justify-center gap-4 sm:gap-6" data-aos="fade-up" data-aos-delay="400">
-                    <p class="text-sm sm:text-base md:text-xl text-gray-600 text-center mb-4 sm:mb-8 md:mb-16">
-                        Así es como tus clientes exploran tus productos en tu tienda online.
-                    </p>
-                    <!-- Imagen del screenshot del teléfono -->
-                    <img src="img/iPhone-13-PRO-ortop-81vo.vercel.app (3).png" alt="Captura de pantalla de la tienda online de MarketOrtopedia en un teléfono" class="w-64 sm:w-80 rounded-xl shadow-lg border border-gray-200 mx-auto">
-                    <!-- Botón Call-to-action -->
-                    <button onclick="openDemoModal()" class="bg-[#F02626] text-white px-4 sm:px-6 md:px-10 py-3 sm:py-3 md:py-5 rounded-full text-base sm:text-base md:text-xl font-bold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center mx-auto w-full max-w-xs mt-6 sm:mt-8">
-                        <span class="mr-2">👉</span>
-                        Ver tienda online en vivo
-                    </button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="flex flex-col items-center">
+                    <span class="material-icons text-[#F02626] text-4xl mb-2">bolt</span>
+                    <p class="font-bold">Sin vueltas</p>
+                    <p class="text-gray-600 text-sm">Mostrá tu catálogo y vendé en minutos, sin pasos innecesarios.</p>
+                        </div>
+                <div class="flex flex-col items-center">
+                    <span class="material-icons text-[#F02626] text-4xl mb-2">timer</span>
+                    <p class="font-bold">Rápido y directo</p>
+                    <p class="text-gray-600 text-sm">Recibí pedidos por WhatsApp y cobrá con Mercado Pago al instante.</p>
+                    </div>
+                <div class="flex flex-col items-center">
+                    <span class="material-icons text-[#F02626] text-4xl mb-2">school</span>
+                    <p class="font-bold">Sin conocimientos técnicos</p>
+                    <p class="text-gray-600 text-sm">No necesitás saber de tecnología ni registrarte en plataformas complejas.</p>
+                        </div>
+                <div class="flex flex-col items-center">
+                    <span class="material-icons text-[#F02626] text-4xl mb-2">verified_user</span>
+                    <p class="font-bold">Confiable y pensado para vos</p>
+                    <p class="text-gray-600 text-sm">Hecho para emprendedores que quieren enfocarse en vender, no en configurar.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Nueva Sección: Mensajes de WhatsApp -->
-    <section id="whatsapp-messages-section" class="py-8 sm:py-20 md:py-24 bg-white">
-        <div class="container mx-auto max-w-6xl px-2 sm:px-4">
-            <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 text-gray-800">
-                <span class="text-[#F02626]">Así se ven</span> los mensajes de 1Minuto
-            </h2>
-            <p class="text-sm sm:text-lg md:text-xl text-gray-600 text-center mb-6 sm:mb-12 md:mb-16">
-                Automatiza la gestión de tus pedidos y olvídate de las confusiones en WhatsApp.
-            </p>
-            <div class="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-8">
-                <!-- Tarjeta de Mensaje 1: Pedido de Sofía M. -->
-                <div class="rounded-xl shadow-lg hover-card smooth-transition w-full max-w-xs sm:max-w-md lg:w-1/2 overflow-hidden mb-4 lg:mb-0" data-aos="fade-up" data-aos-delay="100">
-                    <!-- Header de la tarjeta (Verde) -->
-                    <div class="bg-green-600 p-4 flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-green-600 font-bold mr-3">C</div>
-                        <div>
-                            <h3 class="text-base sm:text-lg font-bold text-white">Pedido de Sofía M.</h3>
-                            <p class="text-xs sm:text-sm text-green-200">en línea</p>
-                        </div>
-                    </div>
-                    <!-- Cuerpo de la tarjeta (Oscuro) -->
-                    <div class="bg-gray-900 p-4 rounded-b-xl text-left">
-                        <div class="flex justify-center mb-3">
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">HOY 10:30</span>
-                        </div>
-                        <!-- Mensaje Recibido 1 -->
-                        <div class="bg-white p-3 rounded-xl text-gray-800 relative message-bubble received-bubble shadow-sm">
-                            <p class="font-semibold mb-2 text-sm">¡Hola! Quiero hacer el siguiente pedido:</p>
-                            <ul class="list-disc list-inside ml-4 text-xs sm:text-sm">
-                                <li>Pizza Pepperoni Grande x 1</li>
-                                <li>Gaseosa 1.5L Coca-Cola x 1</li>
-                                <li>Empanadas de Carne x 6</li>
-                            </ul>
-                            <p class="mt-2 text-xs sm:text-sm">Total: <span class="font-bold">$8.500 ARS</span></p>
-                            <p class="mt-2 text-xs sm:text-sm">Dirección: Av. Corrientes 1234, Piso 5, Depto B.</p>
-                            <p class="text-xs sm:text-sm">Forma de pago: Efectivo al entregar.</p>
-                            <p class="text-xs text-gray-500 text-right mt-2">10:30 ✓✓</p>
-                        </div>
-                        <!-- Mensaje Enviado 1 (Respuesta del negocio) -->
-                        <div class="bg-[#dcf8c6] p-3 rounded-xl text-gray-800 mt-2 ml-auto max-w-[85%] relative message-bubble sent-bubble shadow-sm">
-                            <p class="text-xs sm:text-sm">¡Pedido recibido! Tu orden #PZ9876 está en preparación. Te avisaremos cuando salga a reparto. ¡Gracias por tu compra!</p>
-                            <p class="text-xs text-gray-500 text-right mt-2">10:32 ✓✓</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tarjeta de Mensaje 2: Pedido de Juan C. -->
-                <div class="rounded-xl shadow-lg hover-card smooth-transition w-full max-w-xs sm:max-w-md lg:w-1/2 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Header de la tarjeta (Verde) -->
-                    <div class="bg-green-600 p-4 flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-green-600 font-bold mr-3">C</div>
-                        <div>
-                            <h3 class="text-base sm:text-lg font-bold text-white">Pedido de Juan C.</h3>
-                            <p class="text-xs sm:text-sm text-green-200">en línea</p>
-                        </div>
-                    </div>
-                    <!-- Cuerpo de la tarjeta (Oscuro) -->
-                    <div class="bg-gray-900 p-4 rounded-b-xl text-left">
-                        <div class="flex justify-center mb-3">
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">HOY 09:15</span>
-                        </div>
-                        <!-- Mensaje Recibido 1 -->
-                        <div class="bg-white p-3 rounded-xl text-gray-800 relative message-bubble received-bubble shadow-sm">
-                            <p class="font-semibold mb-2 text-sm">Quiero encargar lo siguiente:</p>
-                            <ul class="list-disc list-inside ml-4 text-xs sm:text-sm">
-                                <li>Combo Desayuno x 2</li>
-                                <li>Jugo de Naranja Natural x 2</li>
-                            </ul>
-                            <p class="mt-2 text-xs sm:text-sm">Total: <span class="font-bold">$4.800 ARS</span></p>
-                            <p class="mt-2 text-xs sm:text-sm">Dirección: Calle Falsa 456, Casa 3. Pago con tarjeta.</p>
-                            <p class="text-xs text-gray-500 text-right mt-2">09:15 ✓✓</p>
-                        </div>
-                        <!-- Mensaje Enviado 1 -->
-                        <div class="bg-[#dcf8c6] p-3 rounded-xl text-gray-800 mt-2 ml-auto max-w-[85%] relative message-bubble sent-bubble shadow-sm">
-                            <p class="text-xs sm:text-sm">¡Confirmado! Tu pedido #DES345 está en camino. Te enviaremos un link de pago en breve.</p>
-                            <p class="text-xs text-gray-500 text-right mt-2">09:17 ✓✓</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Comparativa Section (opcional) -->
+    <section id="comparativa" class="py-6 sm:py-8 md:py-10 bg-white">
+        <div class="container mx-auto max-w-4xl px-2 sm:px-4">
+            <h2 class="text-xl sm:text-3xl font-bold text-center mb-8 text-[#F02626]">¿Por qué elegir esta solución y no Shopify, Tienda Nube o MercadoLibre?</h2>
+            <div class="overflow-x-auto shadow-lg rounded-xl border border-gray-200">
+                <table class="min-w-full text-center divide-y divide-gray-200">
+                    <thead class="bg-gradient-to-r from-[#F02626] to-[#d41f1f] text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left text-sm font-semibold uppercase tracking-wider rounded-tl-xl">&nbsp;</th>
+                            <th class="py-3 px-4 text-sm font-semibold uppercase tracking-wider">Catálogo + WhatsApp</th>
+                            <th class="py-3 px-4 text-sm font-semibold uppercase tracking-wider">Shopify / Tienda Nube</th>
+                            <th class="py-3 px-4 text-sm font-semibold uppercase tracking-wider rounded-tr-xl">MercadoLibre</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-bold text-left">Fácil de usar</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-4 font-bold text-left">Pago integrado</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-bold text-left">Precio fijo mensual</td>
+                            <td class="text-green-600 font-bold text-xl">✅ <span class="text-base">$15.000</span></td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-4 font-bold text-left">Sin comisiones extra</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-bold text-left">Pedidos a WhatsApp</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-4 font-bold text-left">Listo en 1 minuto</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-bold text-left">Sin vueltas ni complicaciones</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-4 font-bold text-left">Rápido y directo</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-bold text-left">Sin conocimientos técnicos</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="py-3 px-4 font-bold text-left">Confiable y pensado para vos</td>
+                            <td class="text-green-600 font-bold text-xl">✅</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                            <td class="text-red-500 font-bold text-xl">❌</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
-
-    <!-- Sección de Llamada a la Acción para Desarrollo a Medida -->
-    <section id="cta-personalizado" class="py-4 sm:py-12 md:py-20 text-center">
-        <div class="container mx-auto px-2 sm:px-4 max-w-full sm:max-w-2xl md:max-w-4xl">
-            <h1 class="text-lg sm:text-2xl md:text-4xl font-bold mb-2 sm:mb-6 md:mb-8">
-                ¿Necesitás algo <span class="text-[#F02626]">más específico</span> para tu negocio?
-            </h1>
-            <p class="text-m sm:text-base md:text-xl text-gray-700 mb-3 sm:mb-6 md:mb-10">
-                Si tu proyecto requiere funcionalidades únicas o integraciones avanzadas, nuestro equipo está listo para crear una solución a medida.
-            </p>
-            <button onclick="openModal()" class="bg-[#F02626] text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 transform shadow-lg w-full max-w-xs mx-auto mt-4">
-                👉 Hablá con nuestros expertos
-            </button>
-        </div>
-    </section>
-
-    <!-- Sección de Preguntas Frecuentes (FAQ) -->
-    <section id="faq" class="py-6 sm:py-20 md:py-24">
-        <div class="container mx-auto px-2 sm:px-4 max-w-full sm:max-w-2xl md:max-w-4xl">
-            <h1 class="text-lg sm:text-2xl md:text-4xl font-bold text-center mb-6 sm:mb-10 md:mb-14">
-                <span class="text-[#F02626]">Preguntas Frecuentes</span>
-            </h1>
-            <div class="space-y-2 sm:space-y-4 md:space-y-6">
-                <!-- Pregunta 1 -->
-                <div class="bg-white p-2 sm:p-4 md:p-6 rounded-lg shadow-sm hover-card smooth-transition" data-aos="fade-up">
-                    <h3 class="font-bold text-base sm:text-lg mb-1 sm:mb-2 cursor-pointer flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        ¿Qué tipo de negocios pueden usar 1minuto?
-                        <span class="material-icons">expand_more</span>
-                    </h3>
-                    <p class="text-gray-600 hidden mt-2 text-sm sm:text-base">1minuto es ideal para cualquier negocio que quiera automatizar la recepción de pedidos y la comunicación con sus clientes a través de WhatsApp, como restaurantes, tiendas de ropa, servicios a domicilio, etc.</p>
-                </div>
-                <!-- Pregunta 2 -->
-                <div class="bg-white p-2 sm:p-4 md:p-6 rounded-lg shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="font-bold text-base sm:text-lg mb-1 sm:mb-2 cursor-pointer flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        ¿Necesito conocimientos técnicos para usarlo?
-                        <span class="material-icons">expand_more</span>
-                    </h3>
-                    <p class="text-gray-600 hidden mt-2 text-sm sm:text-base">No, 1minuto está diseñado para ser muy fácil de usar. Puedes configurar tu tienda y empezar a vender en pocos minutos sin necesidad de conocimientos de programación.</p>
-                </div>
-                <!-- Pregunta 3 -->
-                <div class="bg-white p-2 sm:p-4 md:p-6 rounded-lg shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-bold text-base sm:text-lg mb-1 sm:mb-2 cursor-pointer flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        ¿Cómo recibo los pedidos?
-                        <span class="material-icons">expand_more</span>
-                    </h3>
-                    <p class="text-gray-600 hidden mt-2 text-sm sm:text-base">Recibirás los pedidos de forma clara y organizada directamente en tu WhatsApp, listos para procesar. También tendrás un centro de gestión de pedidos en tu panel de control.</p>
-                </div>
-                <!-- Pregunta 4 -->
-                <div class="bg-white p-2 sm:p-4 md:p-6 rounded-lg shadow-sm hover-card smooth-transition" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="font-bold text-base sm:text-lg mb-1 sm:mb-2 cursor-pointer flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        ¿Puedo personalizar mi tienda online?
-                        <span class="material-icons">expand_more</span>
-                    </h3>
-                    <p class="text-gray-600 hidden mt-2 text-sm sm:text-base">Sí, puedes personalizar la apariencia de tu tienda, subir tu logo, colores y organizar tus productos como desees para que refleje la identidad de tu marca.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Segundo Botón de Llamada a la Acción -->
-    <section id="cta-final" class="py-6 sm:py-20 md:py-24 text-center bg-[#F02626] text-white">
+    <!-- CTA Final -->
+    <section id="cta-final" class="py-6 sm:py-10 md:py-12 text-center bg-[#F02626] text-white">
         <div class="container mx-auto px-2 sm:px-4 max-w-4xl">
-            <h1 class="text-base sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-8">
-                ¡Empezá hoy mismo a vender por WhatsApp!
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-8">
+                ¿Listo para vender fácil y rápido?
             </h1>
-            <p class="text-m sm:text-lg md:text-xl mb-4 sm:mb-10">
-                Transformá tu negocio con 1minuto y liberá tu tiempo. Recibí pedidos organizados y sin esfuerzo.
-            </p>
-            <button onclick="openModal()" class="bg-white text-[#F02626] px-4 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-lg font-bold hover:bg-gray-200 transition-all duration-300 hover:scale-105 transform shadow-lg w-full max-w-xs mx-auto mt-2">
-                👉 Agendar una demo gratuita
-            </button>
+            <p class="text-lg sm:text-xl mb-4">Probá gratis y empezá a vender en 1 minuto.</p>
+            <a href="https://wa.me/+5493834035119" target="_blank" rel="noopener" class="bg-white text-[#F02626] px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-200 transition-all duration-300 hover:scale-105 shadow-lg w-full max-w-xs mx-auto inline-block ">
+                🚀 Empezá gratis ahora
+            </a>
         </div>
     </section>
 
@@ -1032,6 +994,26 @@
 
     </main>
 
+    <!-- Sección de Planes -->
+    <section id="planes" class="py-10 bg-gray-50 text-center">
+        <div class="container mx-auto max-w-2xl px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[#F02626]">Planes</h2>
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col items-center border border-gray-200">
+                <span class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#F02626] mb-6 sm:mb-8 md:mb-10">$15.000 <span class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-700">ARS/mes</span></span>
+                <ul class="text-left my-6 space-y-4">
+                    <li class="flex items-center text-lg"><span class="material-icons text-green-500 mr-3">check_circle</span>Catálogo digital ilimitado</li>
+                    <li class="flex items-center text-lg"><span class="material-icons text-green-500 mr-3">check_circle</span>Pedidos automáticos por WhatsApp</li>
+                    <li class="flex items-center text-lg"><span class="material-icons text-green-500 mr-3">check_circle</span>Cobros con Mercado Pago</li>
+                    <li class="flex items-center text-lg"><span class="material-icons text-green-500 mr-3">check_circle</span>Soporte prioritario</li>
+                </ul>
+                <a href="https://wa.me/+5493834035119" target="_blank" rel="noopener" class="bg-[#F02626] text-white px-8 py-4 sm:px-10 sm:py-4 md:px-14 md:py-5 rounded-full text-xl font-bold hover:bg-[#d41f1f] transition-all duration-300 hover:scale-105 shadow-lg mt-6 sm:mt-8 md:mt-10 flex items-center justify-center">
+                    <span class="material-icons text-2xl mr-3">shopping_cart</span>
+                    Empezar ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="py-8 sm:py-16 md:py-20 text-center">
         <div class="container mx-auto px-2 sm:px-4 max-w-6xl">
@@ -1041,13 +1023,13 @@
                      class="h-10 sm:h-12 md:h-14 w-auto object-contain mb-4"
                      style="filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));">
                 <p class="text-gray-700 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">
-                    1minuto es la plataforma que te permite vender tus productos por WhatsApp de forma automática y eficiente, liberando tu tiempo y organizando tus pedidos.
+                    1minuto ahora es un catálogo digital simple, con integración a Mercado Pago para que cobres online de manera fácil y rápida.
                 </p>
             </div>
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="#" class="text-gray-700 hover:text-[#F02626] transition-colors" aria-label="Twitter">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.564-2.005.974-3.127 1.187a4.952 4.952 0 00-8.467 4.543 13.945 13.945 0 01-10.14-5.127 4.956 4.956 0 001.535 6.611A4.935 4.935 0 01.42 10.74a4.952 4.952 0 003.948 4.823A4.945 4.945 0 010 16.58c1.321.436 2.766.678 4.276.678A13.928 13.928 0 0018.235 24c0-.213 0-.425-.015-.636A9.957 9.957 0 0024 14.594z"/>
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.564-2.005.974-3.127 1.187a4.952 4.952 0 00-8.467 4.543 13.945 13.945 0 01-10.14-5.127 4.956 4.956 0 001.535 6.611A4.935 4.935 0 01.42 10.74a4.952 4.952 0 003.948 4.823A4.945 4.945 0 010 16.58c1.321.436 2.766.678 4.276.678A13.928 13.928 0 0018.235 24c0-.213 0-.425-.001-.636A9.957 9.957 0 0024 14.594z"/>
                     </svg>
                 </a>
                 <a href="#" class="text-gray-700 hover:text-[#F02626] transition-colors" aria-label="LinkedIn">
